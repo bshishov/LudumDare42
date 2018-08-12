@@ -5,7 +5,7 @@ namespace Assets.Scripts
 {
     public class Placer : Singleton<Placer>
     {
-        public VoxelFurniture Target;
+        private VoxelFurniture _target;
 
         [Header("Visuals")] public Material RedVoxel;
 
@@ -27,26 +27,26 @@ namespace Assets.Scripts
                 if (furniture.Prefab != null)
                 {
                     var go = GameObject.Instantiate(furniture.Prefab, Vector3.zero, Quaternion.identity);
-                    Target = go.GetComponent<VoxelFurniture>();
+                    _target = go.GetComponent<VoxelFurniture>();
                 }
             }
         }
 
         private void Update()
         {
-            if (Target == null || Room.Instance == null)
+            if (_target == null || Room.Instance == null)
                 return;
 
-            var collisions = VoxelSpace.InverseCollistionsA(Target.transform.position, Target.Volume,
+            var collisions = VoxelSpace.InverseCollistionsA(_target.transform.position, _target.Volume,
                 Room.Instance.transform.position, Room.Instance.FillVolume);
 
-            var collisionsWithObjects = VoxelSpace.CollistionsA(Target.transform.position, Target.Volume,
+            var collisionsWithObjects = VoxelSpace.CollistionsA(_target.transform.position, _target.Volume,
                 Room.Instance.transform.position, Room.Instance.ObjectsVolume);
             collisions.AddRange(collisionsWithObjects);
             
             foreach (var collision in collisions)
             {
-                var pos = Target.VoxelObject.GetActualWorldVoxel(collision.LocalPosA);
+                var pos = _target.VoxelObject.GetActualWorldVoxel(collision.LocalPosA);
                 //var pos = VoxelSpace.GetWorldPosition(collision.WorldPos);
                 Graphics.DrawMesh(_voxelMesh, Matrix4x4.Translate(pos), RedVoxel, layer: LayerMask.GetMask("Default"));
             }
@@ -58,10 +58,10 @@ namespace Assets.Scripts
                 _yPos -= 1;
 
             if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Fire2"))
-                Target.RotateYCw();
+                _target.RotateYCw();
 
             if (Input.GetKeyDown(KeyCode.F))
-                Target.RotateXCw();
+                _target.RotateXCw();
 
             var cameraRay = Camera.main.ScreenPointToRay(Input.mousePosition);
             var distance = 0f;
@@ -76,7 +76,7 @@ namespace Assets.Scripts
                     voxelPos.y = _yPos;
 
                     var targetPos = VoxelSpace.GetWorldPosition(voxelPos);
-                    Target.MoveSmooth(targetPos);
+                    _target.MoveSmooth(targetPos);
                 }
             }
 
@@ -84,8 +84,8 @@ namespace Assets.Scripts
             {
                 if (collisions.Count == 0)
                 {
-                    Room.Instance.PlaceFurniture(Target);
-                    Target = null;
+                    Room.Instance.PlaceFurniture(_target);
+                    _target = null;
                     GetNextTarget();
                 }
                 else

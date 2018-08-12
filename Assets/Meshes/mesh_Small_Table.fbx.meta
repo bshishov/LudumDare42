@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 35c91b2235d754a42957ef5354b3e97c
-timeCreated: 1534017938
+guid: 4b3037c1b773dbf4ea7238e614c2996b
+timeCreated: 1534025654
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
@@ -12,17 +12,7 @@ ModelImporter:
     2300000: //RootNode
     3300000: //RootNode
     4300000: mesh_Small_Table
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: mat_Small_Table_01
-    second: {fileID: 2100000, guid: 6404c85781cae1a47a65ed1fdde517d2, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: mat_Small_Table_02
-    second: {fileID: 2100000, guid: a925e1fc5aa720e4aa58b0297bf3c848, type: 2}
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0
@@ -77,7 +67,7 @@ ModelImporter:
     normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
-  importAnimation: 0
+  importAnimation: 1
   copyAvatar: 0
   humanDescription:
     serializedVersion: 2

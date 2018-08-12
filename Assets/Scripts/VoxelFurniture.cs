@@ -15,8 +15,8 @@ namespace Assets.Scripts
         [Header("Animation")]
         public GameObject Representation;
         public AnimationCurve TransformCurve = AnimationCurve.EaseInOut(0, 0, 1, 1);
-        public float MoveRotateTime = 0.5f;
-        public float MoveTime = 0.5f;
+        public float MoveRotateTime = 0.3f;
+        public float MoveTime = 0.1f;
 
         private VoxelObject _voxelObject;
         private Vector3 _startLocalPosition;

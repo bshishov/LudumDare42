@@ -32,7 +32,7 @@ namespace Assets.Scripts
         [Header("System")]
         public VoxelObject ObjectsVoxelObject;
 
-        private void Start()
+        private void Awake()
         {
             _voxelObject = GetComponent<VoxelObject>();
 

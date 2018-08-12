@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 42c99ee3f519f7c4dad7e1e0ff5ecb6a
-timeCreated: 1534013165
+guid: a6dbd5386b7d2b641a751d4dc2025fe8
+timeCreated: 1534025600
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
@@ -18,52 +18,12 @@ ModelImporter:
     2300000: //RootNode
     3300000: //RootNode
     4300000: mesh_Wardrob
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: mat_Wardrob_Hooks
-    second: {fileID: 2100000, guid: e53286a90e610bc42a44fb9b60c2be1f, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: mat_Wardrob_Iron
-    second: {fileID: 2100000, guid: 51cabadc5baf50e4e910de0e8ae0eff5, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: mat_Wardrob_Mane
-    second: {fileID: 2100000, guid: 38f2e92ad4f9e3b45950d8c149a57533, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: mat_Wardrobe_Clothes_01
-    second: {fileID: 2100000, guid: 0a7c45e85c34f47428ccf57036f67777, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: mat_Wardrobe_Clothes_02
-    second: {fileID: 2100000, guid: 1b0d97639c73faf4da8dbcfffbf06212, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: mat_Wardrobe_Clothes_03
-    second: {fileID: 2100000, guid: f78898d552cb43e4f9d979d5556e48ae, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: mat_Wardrobe_Clothes_04
-    second: {fileID: 2100000, guid: 3368d9c3d9cb7694e8c40372b755acc6, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: mat_Wardrobe_Clothes_05
-    second: {fileID: 2100000, guid: 4e55a58eb8ba5da4f90c12668a008742, type: 2}
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0
     materialSearch: 1
-    materialLocation: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
@@ -113,7 +73,7 @@ ModelImporter:
     normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
-  importAnimation: 0
+  importAnimation: 1
   copyAvatar: 0
   humanDescription:
     serializedVersion: 2
