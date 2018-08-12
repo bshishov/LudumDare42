@@ -52,7 +52,7 @@
 				float t = i.vertex.x + i.vertex.y;
 				t = sin(t * 0.5 + _Time.w * 5);
 				t *= t;				
-				return t * fixed4(1, 0, 0, 0.6) + (1 - t) * fixed4(0, 0, 0, 0.6);
+				return t * fixed4(1, 0, 0, 0.4) + (1 - t) * fixed4(0, 0, 0, 0.4);
 			}
 			ENDCG
 		}	

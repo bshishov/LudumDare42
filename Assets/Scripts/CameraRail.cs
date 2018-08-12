@@ -53,10 +53,10 @@ namespace Assets.Scripts
             }
             else
             {
-                if (Input.GetKeyDown(KeyCode.A))
+                if (Input.GetButtonDown("CameraLeft"))
                     Prev();
 
-                if (Input.GetKeyDown(KeyCode.D))
+                if (Input.GetButtonDown("CameraRight"))
                     Next();
             }
         }

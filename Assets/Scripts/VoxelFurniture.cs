@@ -1,4 +1,5 @@
 ﻿using System;
+using Assets.Scripts.Data;
 using UnityEngine;
 
 namespace Assets.Scripts
@@ -8,6 +9,7 @@ namespace Assets.Scripts
     {
         public VoxelVolume Volume { get { return _voxelObject.Volume; } }
         public VoxelObject VoxelObject { get { return _voxelObject; } }
+        public Furniture Furniture { get; set; }
 
         [Header("Animation")]
         public GameObject Representation;
