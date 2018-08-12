@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32155045915b8834db38ed41b29918e7, type: 3}
+  m_Name: ArmChair2
+  m_EditorClassIdentifier: 
+  Name: Armchair
+  Icon: {fileID: 21300000, guid: 928ccc5cbbd315a4788ec949727923da, type: 3}
+  Prefab: {fileID: 1703940206822286, guid: bfb4f2e5f283d4643946a343753bc4d0, type: 2}

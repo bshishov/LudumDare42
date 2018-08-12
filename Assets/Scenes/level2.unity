@@ -682,7 +682,7 @@ Prefab:
     - target: {fileID: 114319676546877230, guid: 8981b365fa20ee4488aabcf3681e3fdf,
         type: 2}
       propertyPath: FurnitureTasks.Array.size
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114287610647431358, guid: 8981b365fa20ee4488aabcf3681e3fdf,
         type: 2}
@@ -6641,6 +6641,23 @@ Prefab:
         type: 2}
       propertyPath: Volume.Data._keys.Array.data[220].y
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114319676546877230, guid: 8981b365fa20ee4488aabcf3681e3fdf,
+        type: 2}
+      propertyPath: FurnitureTasks.Array.data[1].Furniture
+      value: 
+      objectReference: {fileID: 11400000, guid: 3414222fdea043e4888df936d593b0ce,
+        type: 2}
+    - target: {fileID: 114319676546877230, guid: 8981b365fa20ee4488aabcf3681e3fdf,
+        type: 2}
+      propertyPath: FurnitureTasks.Array.data[0].Furniture
+      value: 
+      objectReference: {fileID: 11400000, guid: 7c633be91a1417c438472c63fb094a3c,
+        type: 2}
+    - target: {fileID: 114287610647431358, guid: 8981b365fa20ee4488aabcf3681e3fdf,
+        type: 2}
+      propertyPath: DrawGizmos
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8981b365fa20ee4488aabcf3681e3fdf, type: 2}
