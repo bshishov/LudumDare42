@@ -63,7 +63,7 @@ namespace Assets.Scripts
 
         public void PlaceFurniture(VoxelFurniture furniture)
         {
-            furniture.FinishMovement();
+            //furniture.FinishMovement();
             foreach (var kvp in furniture.Volume.Data)
             {
                 var worldVoxel = VoxelSpace.GetWorldVoxelFromLocalVoxel(furniture.transform.position,
