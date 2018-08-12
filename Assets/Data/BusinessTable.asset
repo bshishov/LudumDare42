@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32155045915b8834db38ed41b29918e7, type: 3}
+  m_Name: BusinessTable
+  m_EditorClassIdentifier: 
+  Name: Business Table
+  Icon: {fileID: 21300000, guid: f8f89cd8322e679409a148821b5bd470, type: 3}
+  Prefab: {fileID: 1183853005416944, guid: f384dd233e36f264a8ce3e028ba91863, type: 2}

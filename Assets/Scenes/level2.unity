@@ -730,22 +730,22 @@ Prefab:
         type: 2}
       propertyPath: FurnitureTasks.Array.data[2].Furniture
       value: 
-      objectReference: {fileID: 11400000, guid: 1bee5ace1776d834ab8eb8c172409dfa,
+      objectReference: {fileID: 11400000, guid: 3414222fdea043e4888df936d593b0ce,
         type: 2}
     - target: {fileID: 114319676546877230, guid: 8981b365fa20ee4488aabcf3681e3fdf,
         type: 2}
       propertyPath: FurnitureTasks.Array.data[2].Amount
-      value: 10
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114319676546877230, guid: 8981b365fa20ee4488aabcf3681e3fdf,
         type: 2}
       propertyPath: FurnitureTasks.Array.data[0].Amount
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114319676546877230, guid: 8981b365fa20ee4488aabcf3681e3fdf,
         type: 2}
       propertyPath: FurnitureTasks.Array.data[1].Amount
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 114287610647431358, guid: 8981b365fa20ee4488aabcf3681e3fdf,
         type: 2}
@@ -6646,18 +6646,40 @@ Prefab:
         type: 2}
       propertyPath: FurnitureTasks.Array.data[1].Furniture
       value: 
-      objectReference: {fileID: 11400000, guid: 3414222fdea043e4888df936d593b0ce,
+      objectReference: {fileID: 11400000, guid: dea08d6cb1b924b438df2b942c55d2fd,
         type: 2}
     - target: {fileID: 114319676546877230, guid: 8981b365fa20ee4488aabcf3681e3fdf,
         type: 2}
       propertyPath: FurnitureTasks.Array.data[0].Furniture
       value: 
-      objectReference: {fileID: 11400000, guid: 7c633be91a1417c438472c63fb094a3c,
+      objectReference: {fileID: 11400000, guid: a4706fdab087bb243a9684493fa5c5eb,
         type: 2}
     - target: {fileID: 114287610647431358, guid: 8981b365fa20ee4488aabcf3681e3fdf,
         type: 2}
       propertyPath: DrawGizmos
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114319676546877230, guid: 8981b365fa20ee4488aabcf3681e3fdf,
+        type: 2}
+      propertyPath: FurnitureTasks.Array.data[3].Furniture
+      value: 
+      objectReference: {fileID: 11400000, guid: b4b614aabcb096e448cd40d75c5a6ce4,
+        type: 2}
+    - target: {fileID: 114319676546877230, guid: 8981b365fa20ee4488aabcf3681e3fdf,
+        type: 2}
+      propertyPath: FurnitureTasks.Array.data[3].Amount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114319676546877230, guid: 8981b365fa20ee4488aabcf3681e3fdf,
+        type: 2}
+      propertyPath: FurnitureTasks.Array.data[4].Furniture
+      value: 
+      objectReference: {fileID: 11400000, guid: b4b614aabcb096e448cd40d75c5a6ce4,
+        type: 2}
+    - target: {fileID: 114319676546877230, guid: 8981b365fa20ee4488aabcf3681e3fdf,
+        type: 2}
+      propertyPath: FurnitureTasks.Array.data[4].Amount
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8981b365fa20ee4488aabcf3681e3fdf, type: 2}
