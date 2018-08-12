@@ -70,5 +70,27 @@ namespace Assets.Scripts
             var localVoxel = voxel - Volume.Pivot;
             return transform.position + (Vector3)localVoxel * VoxelSpace.VoxelSize;
         }
+
+        public BoxCollider UpdateCollider()
+        {
+            var col = GetComponent<BoxCollider>();
+
+            if(col == null)
+                col = gameObject.AddComponent<BoxCollider>();
+
+            Volume.RecalculateBounds();
+            var minBounds = VoxelSpace.GetWorldPositionCenter(VoxelSpace.GetWorldVoxelFromLocalVoxel(transform.position, Volume.MinBounds - Volume.Pivot));
+            var maxBounds = VoxelSpace.GetWorldPositionCenter(VoxelSpace.GetWorldVoxelFromLocalVoxel(transform.position, Volume.MaxBounds - Volume.Pivot));
+            var boundsCenter = Vector3.Lerp(minBounds, maxBounds, 0.5f);
+            var boundSize = new Vector3(
+                Mathf.Abs(maxBounds.x - minBounds.x),
+                Mathf.Abs(maxBounds.y - minBounds.y),
+                Mathf.Abs(maxBounds.z - minBounds.z)
+            );
+            col.center = transform.InverseTransformPoint(boundsCenter);
+            col.size = boundSize + VoxelSpace.VoxelSize3D;
+
+            return col;
+        }
     }
 }

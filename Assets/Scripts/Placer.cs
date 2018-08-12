@@ -57,6 +57,9 @@ namespace Assets.Scripts
             else if(scroll > 0)
                 _yPos -= 1;
 
+            _yPos = Mathf.Min(_yPos, Room.Instance.FillVolume.MaxBounds.y);
+            _yPos = Mathf.Max(_yPos, Room.Instance.FillVolume.MinBounds.y);
+
             if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Fire2"))
                 _target.RotateYCw();
 
@@ -70,7 +73,9 @@ namespace Assets.Scripts
                 var point = cameraRay.GetPoint(distance);
                 Debug.DrawLine(Camera.main.transform.position, point, Color.magenta, 0.1f);
 
-                //if (VoxelSpace.IsInVoxelVolume(point, Room.Instance.transform.position, Room.Instance.Volume))
+                point = Room.Instance.Collider.bounds.ClosestPoint(point);
+
+                //if (VoxelSpace.IsInVoxelVolume(point, Room.Instance.transform.position, Room.Instance.FillVolume))
                 {
                     var voxelPos = VoxelSpace.GetWorldVoxelFromWorldPos(point);
                     voxelPos.y = _yPos;

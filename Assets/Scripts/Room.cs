@@ -10,6 +10,7 @@ namespace Assets.Scripts
     public class Room : Singleton<Room>
     {
         public VoxelVolume FillVolume {get { return _voxelObject.Volume; } }
+        public BoxCollider Collider { get { return _collider; } }
 
         public VoxelVolume ObjectsVolume
         {
@@ -32,6 +33,8 @@ namespace Assets.Scripts
         [Header("System")]
         public VoxelObject ObjectsVoxelObject;
 
+        private BoxCollider _collider;
+
         private void Awake()
         {
             _voxelObject = GetComponent<VoxelObject>();
@@ -47,6 +50,11 @@ namespace Assets.Scripts
             allFurniture = allFurniture.OrderBy(x => Random.value).ToList();
             foreach (var f in allFurniture)
                 FurnitureStack.Push(f);
+        }
+
+        private void Start()
+        {
+            _collider = _voxelObject.UpdateCollider();
         }
 
         private void Update()
