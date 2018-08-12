@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace Assets.Scripts
 {
@@ -23,6 +24,7 @@ namespace Assets.Scripts
         private bool _isAnimating = false;
         private Vector3 _target;
         private Vector3 _velocity;
+        private Action _moveCallback;
 
         private void Start()
         {
@@ -58,6 +60,11 @@ namespace Assets.Scripts
             }
 
             transform.position = Vector3.SmoothDamp(transform.position, _target, ref _velocity, MoveTime);
+            if (Vector3.Distance(transform.position, _target) < 0.1f && _moveCallback != null)
+            {
+                _moveCallback();
+                _moveCallback = null;
+            }
         }
 
         public void RotateYCw()
@@ -120,9 +127,10 @@ namespace Assets.Scripts
             }
         }
 
-        public void MoveSmooth(Vector3 target)
+        public void MoveSmooth(Vector3 target, Action callback=null)
         {
             _target = target;
+            _moveCallback = callback;
         }
 
 
