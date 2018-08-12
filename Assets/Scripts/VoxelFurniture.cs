@@ -156,5 +156,15 @@ namespace Assets.Scripts
             }
             */
         }
+
+        public void FinishMovement()
+        {
+            _isAnimating = false;
+            _animTime = 0f;
+
+            Representation.transform.localPosition = _targetLocalPosition;
+            Representation.transform.localRotation = _targetLocalRotation;
+            transform.position = _target;
+        }
     }
 }
