@@ -71,6 +71,20 @@ namespace Assets.Scripts
             return transform.position + (Vector3)localVoxel * VoxelSpace.VoxelSize;
         }
 
+        public Bounds GetWorldBounds()
+        {
+            Volume.RecalculateBounds();
+            var minBounds = VoxelSpace.GetWorldPositionCenter(VoxelSpace.GetWorldVoxelFromLocalVoxel(transform.position, Volume.MinBounds - Volume.Pivot));
+            var maxBounds = VoxelSpace.GetWorldPositionCenter(VoxelSpace.GetWorldVoxelFromLocalVoxel(transform.position, Volume.MaxBounds - Volume.Pivot));
+            var boundsCenter = Vector3.Lerp(minBounds, maxBounds, 0.5f);
+            var boundSize = new Vector3(
+                Mathf.Abs(maxBounds.x - minBounds.x),
+                Mathf.Abs(maxBounds.y - minBounds.y),
+                Mathf.Abs(maxBounds.z - minBounds.z)
+            );
+            return new Bounds(boundsCenter, boundSize + VoxelSpace.VoxelSize3D);
+        }
+
         public BoxCollider UpdateCollider()
         {
             var col = GetComponent<BoxCollider>();

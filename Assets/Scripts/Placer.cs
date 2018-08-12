@@ -7,12 +7,17 @@ namespace Assets.Scripts
     {
         private VoxelFurniture _target;
 
-        [Header("Visuals")] public Material RedVoxel;
+        [Header("Gameplay")]
+        public float Timer = 10f;
+
+        [Header("Visuals")]
+        public Material RedVoxel;
 
         private Plane _plane = new Plane(Vector3.up, 0f);
         private int _yPos = 0;
         private Mesh _voxelMesh;
         private bool _placeLock;
+        private float _remainingTime;
 
         private void Start()
         {
@@ -29,6 +34,9 @@ namespace Assets.Scripts
                 {
                     var go = GameObject.Instantiate(furniture.Prefab, Vector3.zero, Quaternion.identity);
                     _target = go.GetComponent<VoxelFurniture>();
+                    _target.Furniture = furniture;
+
+                    _remainingTime = Timer;
                 }
             }
         }
@@ -38,11 +46,19 @@ namespace Assets.Scripts
             if (_target == null || Room.Instance == null)
                 return;
 
+            _remainingTime -= Time.deltaTime;
+            if (_remainingTime < 0)
+            {
+                Destroy(_target.gameObject);
+                GetNextTarget();
+                return;
+            }
+
             // Rotation
-            if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Fire2"))
+            if (Input.GetButtonDown("RotateY"))
                 _target.RotateYCw();
 
-            if (Input.GetKeyDown(KeyCode.F))
+            if (Input.GetButtonDown("RotateX"))
                 _target.RotateXCw();
 
             // Placement target
@@ -100,7 +116,7 @@ namespace Assets.Scripts
                 _target.MoveSmooth(targetPosition);
 
 
-                if (Input.GetButtonDown("Fire1"))
+                if (Input.GetButtonDown("Place"))
                 {
                     // If no collisions in target find fall distance
                     if (collisions.Count == 0)
@@ -148,7 +164,7 @@ namespace Assets.Scripts
                         new Vector3Int(roomXz.x, localH, roomXz.y) - Room.Instance.ObjectsVolume.Pivot);
 
                     fallDistance = Mathf.Min(Mathf.Abs(voxelWorldRoom.y - voxelWorldFuniture.y) - 1, fallDistance);
-                    Debug.Log(fallDistance);
+                    fallDistance = Mathf.Max(fallDistance, 0);
                 }
 
                 fallDistance = Mathf.Min(voxelWorldFuniture.y, fallDistance);
