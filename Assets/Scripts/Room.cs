@@ -33,6 +33,9 @@ namespace Assets.Scripts
         [TextArea]
         public string Text;
 
+        [TextArea]
+        public string FinishText;
+
         public List<RoomTask> FurniturePool = new List<RoomTask>();
         public List<RoomTask> FurnitureTasks = new List<RoomTask>();
         public List<FurnitureConstraint> FurnitureConstraints = new List<FurnitureConstraint>();
@@ -111,6 +114,9 @@ namespace Assets.Scripts
 
         public bool Star3()
         {
+            if (FurnitureConstraints.Count == 0)
+                return true;
+
             return FurnitureConstraints.All(constraint => CheckConstraint(constraint.A, constraint.B));
         }
 
