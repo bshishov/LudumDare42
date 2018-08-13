@@ -117,6 +117,17 @@ NavMeshSettings:
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: 51d1b4c3474aa6b4db3e72fce336cda3, type: 3}
   m_PrefabInternal: {fileID: 356325986}
+--- !u!114 &106747726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 106747725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7082690e57099fa4d972f91e439a91ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &106747728
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -306,6 +317,17 @@ Transform:
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: 51d1b4c3474aa6b4db3e72fce336cda3, type: 3}
   m_PrefabInternal: {fileID: 905403777}
+--- !u!114 &631148237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 631148236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7082690e57099fa4d972f91e439a91ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &631148239
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -545,6 +567,17 @@ Prefab:
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: 3a1b6355641cd9d46900bc3e41010092, type: 3}
   m_PrefabInternal: {fileID: 1886145172}
+--- !u!114 &1036661568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1036661567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7082690e57099fa4d972f91e439a91ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1036661570
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -564,6 +597,17 @@ Transform:
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: 51d1b4c3474aa6b4db3e72fce336cda3, type: 3}
   m_PrefabInternal: {fileID: 305845142}
+--- !u!114 &1106607668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1106607667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7082690e57099fa4d972f91e439a91ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1106607670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -613,25 +657,6 @@ Prefab:
     - target: {fileID: 4679167807625624, guid: c32c48f290582064da5e634f75c01275, type: 2}
       propertyPath: m_RootOrder
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 20519547038132316, guid: c32c48f290582064da5e634f75c01275,
-        type: 2}
-      propertyPath: orthographic size
-      value: 1.85
-      objectReference: {fileID: 0}
-    - target: {fileID: 20519547038132316, guid: c32c48f290582064da5e634f75c01275,
-        type: 2}
-      propertyPath: far clip plane
-      value: 1000
-      objectReference: {fileID: 0}
-    - target: {fileID: 20519547038132316, guid: c32c48f290582064da5e634f75c01275,
-        type: 2}
-      propertyPath: m_NormalizedViewPortRect.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4679167807625624, guid: c32c48f290582064da5e634f75c01275, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 45
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c32c48f290582064da5e634f75c01275, type: 2}
