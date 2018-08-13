@@ -11,6 +11,8 @@ namespace Assets.Scripts
         public VoxelObject VoxelObject { get { return _voxelObject; } }
         public Furniture Furniture { get; set; }
 
+        public bool PlaceOnStart = false;
+
         [Header("Animation")]
         public GameObject Representation;
         public AnimationCurve TransformCurve = AnimationCurve.EaseInOut(0, 0, 1, 1);
@@ -42,6 +44,14 @@ namespace Assets.Scripts
             }
 
             _target = transform.position;
+
+            if (PlaceOnStart)
+            {
+                if (Room.Instance != null)
+                {
+                    Room.Instance.PlaceFurniture(this);
+                }
+            }
         }
 
         private void Update()

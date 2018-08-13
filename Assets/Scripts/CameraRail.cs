@@ -88,7 +88,7 @@ namespace Assets.Scripts
         private void SetCameraPos(Vector3 p)
         {
             _cameraTransform.position = p;
-            _cameraTransform.LookAt(Vector3.zero);
+            _cameraTransform.LookAt(LookAt);
         }
 
         void OnDrawGizmos()
