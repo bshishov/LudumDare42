@@ -11,6 +11,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32155045915b8834db38ed41b29918e7, type: 3}
   m_Name: Table4
   m_EditorClassIdentifier: 
-  Name: 
-  Icon: {fileID: 0}
-  Prefab: {fileID: 0}
+  Name: Table
+  Icon: {fileID: 21300000, guid: 0aa0f3642ce868546a91359d45adb14e, type: 3}
+  Prefab: {fileID: 1272188681963544, guid: e57273506ecceba408774b8b44ea7b0b, type: 2}
