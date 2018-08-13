@@ -7,7 +7,16 @@ namespace Assets.Scripts
     [RequireComponent(typeof(VoxelObject))]
     public class VoxelFurniture : MonoBehaviour
     {
-        public VoxelVolume Volume { get { return _voxelObject.Volume; } }
+        public VoxelVolume Volume
+        {
+            get
+            {
+                if (_voxelObject == null)
+                    _voxelObject = GetComponent<VoxelObject>();
+                return _voxelObject.Volume;
+            }
+        }
+
         public VoxelObject VoxelObject { get { return _voxelObject; } }
         public Furniture Furniture { get; set; }
 
