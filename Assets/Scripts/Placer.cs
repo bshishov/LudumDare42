@@ -1,4 +1,5 @@
-﻿using Assets.Scripts.Utils;
+﻿using Assets.Scripts.UI;
+using Assets.Scripts.Utils;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -39,6 +40,10 @@ namespace Assets.Scripts
 
                     _remainingTime = Timer;
                 }
+            }
+            else
+            {
+                UITablet.Instance.ShowEnd();
             }
         }
 
