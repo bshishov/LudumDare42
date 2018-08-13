@@ -55,8 +55,14 @@ namespace Assets.Scripts
             _remainingTime -= Time.deltaTime;
             if (_remainingTime < 0)
             {
-                Destroy(_target.gameObject);
-                GetNextTarget();
+                _placeLock = true;
+                _target.MoveSmooth(new Vector3(0, 5, 0), () =>
+                {
+                    Destroy(_target.gameObject);
+                    GetNextTarget();
+                    _placeLock = false;
+                });
+                
                 return;
             }
 
@@ -84,7 +90,6 @@ namespace Assets.Scripts
 
             if(EventSystem.current.IsPointerOverGameObject())
                 return;
-
 
             // Raycasts to floor
             var cameraRay = Camera.main.ScreenPointToRay(Input.mousePosition);
