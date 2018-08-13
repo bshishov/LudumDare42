@@ -217,6 +217,7 @@ GameObject:
   - component: {fileID: 224493461479351958}
   - component: {fileID: 222088587507940264}
   - component: {fileID: 114488157166358462}
+  - component: {fileID: 114850683324157284}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -271,6 +272,7 @@ GameObject:
   - component: {fileID: 224149434188248432}
   - component: {fileID: 222043345273997240}
   - component: {fileID: 114300992664811758}
+  - component: {fileID: 114517582492677248}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -449,6 +451,7 @@ GameObject:
   - component: {fileID: 224926448056172374}
   - component: {fileID: 222842847053219510}
   - component: {fileID: 114146836487631266}
+  - component: {fileID: 114756094009605528}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -505,6 +508,10 @@ MonoBehaviour:
   FurnitureList: {fileID: 224988296943250068}
   FurnitureItemPrefab: {fileID: 1524560384674162, guid: bcaab11b301f28f4ba12f9ff18fa322a,
     type: 2}
+  NextButton: {fileID: 114738473023644212}
+  Star1: {fileID: 114488157166358462}
+  Star2: {fileID: 114146836487631266}
+  Star3: {fileID: 114300992664811758}
 --- !u!114 &114042976776409368
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -960,7 +967,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8308824, g: 0.8308824, b: 0.8308824, a: 1}
+  m_Color: {r: 0.39705884, g: 0.39705884, b: 0.39705884, a: 1}
   m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1030,6 +1037,42 @@ MonoBehaviour:
   m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 5
+--- !u!114 &114517582492677248
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1560174874733952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bc81f763d3fdd24f878b7cf9a922481, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ScaleCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0.19332182
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.50666416
+      value: 1.5143902
+      inSlope: 0.008409823
+      outSlope: 0.008409823
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  AnimTime: 0.5
 --- !u!114 &114517955195062532
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1076,7 +1119,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8308824, g: 0.8308824, b: 0.8308824, a: 1}
+  m_Color: {r: 0.39705884, g: 0.39705884, b: 0.39705884, a: 1}
   m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1299,7 +1342,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8308824, g: 0.8308824, b: 0.8308824, a: 1}
+  m_Color: {r: 0.39705884, g: 0.39705884, b: 0.39705884, a: 1}
   m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1314,6 +1357,42 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114756094009605528
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1884590952799138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bc81f763d3fdd24f878b7cf9a922481, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ScaleCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0.19332182
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.50666416
+      value: 1.5143902
+      inSlope: 0.008409823
+      outSlope: 0.008409823
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  AnimTime: 0.5
 --- !u!114 &114757224136129954
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1401,6 +1480,42 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114850683324157284
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1422338554357028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bc81f763d3fdd24f878b7cf9a922481, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ScaleCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0.19332182
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.50666416
+      value: 1.5143902
+      inSlope: 0.008409823
+      outSlope: 0.008409823
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  AnimTime: 0.5
 --- !u!114 &114860417283519418
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2092,7 +2207,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.000044823, y: 232.5}
+  m_AnchoredPosition: {x: 0.000103948754, y: 242.54993}
   m_SizeDelta: {x: -172.1, y: -852.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224740990373962958

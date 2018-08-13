@@ -96,6 +96,7 @@ namespace Assets.Scripts
 
         public bool Star1()
         {
+            Debug.Log("Checking star1");
             foreach (var task in FurnitureTasks)
             {
                 var placed = _placedFurniture.Count(f => f.Furniture.Equals(task.Furniture));
@@ -108,6 +109,7 @@ namespace Assets.Scripts
 
         public bool Star2()
         {
+            Debug.Log("Checking star2");
             var totalRequired = FurniturePool.Sum(task => task.Amount);
             var placed = _placedFurniture.Count;
             return placed >= totalRequired;
@@ -115,6 +117,7 @@ namespace Assets.Scripts
 
         public bool Star3()
         {
+            Debug.Log("Checking star3");
             if (FurnitureConstraints.Count == 0)
                 return true;
 

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using Assets.Scripts.Utils;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -16,6 +17,10 @@ namespace Assets.Scripts.UI
         public UICanvasGroupFader LestGo;
         public RectTransform FurnitureList;
         public GameObject FurnitureItemPrefab;
+        public Button NextButton;
+        public Image Star1;
+        public Image Star2;
+        public Image Star3;
 
         private UIMover _mover;
         private List<UIFurnitureItem> _furnitureItems = new List<UIFurnitureItem>();
@@ -24,6 +29,18 @@ namespace Assets.Scripts.UI
         {
             Time.timeScale = 0f;
             _mover = GetComponent<UIMover>();
+
+            if (Star1 != null)
+                Star1.gameObject.SetActive(false);
+
+            if (Star2 != null)
+                Star2.gameObject.SetActive(false);
+
+            if (Star3 != null)
+                Star3.gameObject.SetActive(false);
+
+            if (NextButton != null)
+                NextButton.interactable = false;
 
             if (FlavorText != null)
                 FlavorText.text = Room.Instance.Text;
@@ -104,6 +121,36 @@ namespace Assets.Scripts.UI
 
             CaptionText.text = "Results";
             FlavorText.text = Room.Instance.FinishText;
+            StartCoroutine(StarAnimation());
+        }
+
+        private IEnumerator StarAnimation(float startDelay = 0.5f, float starDelay=0.5f)
+        {
+            yield return new WaitForSecondsRealtime(startDelay);
+
+            var star1 = Room.Instance.Star1();
+            var star2 = Room.Instance.Star2();
+            var star3 = Room.Instance.Star3();
+
+            if (Star1 != null)
+            {
+                Star1.gameObject.SetActive(star1);
+                yield return new WaitForSecondsRealtime(starDelay);
+            }
+
+            if (NextButton != null)
+                NextButton.interactable = star1;
+
+            if (Star2 != null)
+            {
+                Star2.gameObject.SetActive(star2);
+                yield return new WaitForSecondsRealtime(starDelay);
+            }
+
+            if (Star3 != null)
+            {
+                Star3.gameObject.SetActive(star3);
+            }
         }
     }
 }
