@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Assets.Scripts.Utils;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -124,13 +125,36 @@ namespace Assets.Scripts.UI
             StartCoroutine(StarAnimation());
         }
 
-        private IEnumerator StarAnimation(float startDelay = 0.5f, float starDelay=0.5f)
+        private IEnumerator StarAnimation(float startDelay = 0.5f, float starDelay=0.5f, float furnitureDelay=0.2f)
         {
             yield return new WaitForSecondsRealtime(startDelay);
 
+            var placedAll = Room.Instance.GetPlacedFurniture();
+            foreach (var uiFurnitureItem in _furnitureItems)
+            {
+                var placed = placedAll.FirstOrDefault(p => p == uiFurnitureItem.Furniture);
+                if (placed != null)
+                {
+                    placedAll.Remove(placed);
+                    uiFurnitureItem.SetCheckmark(true);
+                }
+                yield return new WaitForSecondsRealtime(furnitureDelay);
+            }
+
             var star1 = Room.Instance.Star1();
-            var star2 = Room.Instance.Star2();
-            var star3 = Room.Instance.Star3();
+            var star2 = false;
+            var star3 = false;
+            if (star1)
+            {
+                star2 = Room.Instance.Star2();
+                star3 = Room.Instance.Star3();
+            }
+
+            // Save results
+            var levelName = SceneManager.GetActiveScene().name;
+            PlayerPrefs.SetInt(string.Format("{0}_star1", levelName), star1 ? 1 : 0);
+            PlayerPrefs.SetInt(string.Format("{0}_star2", levelName), star2 ? 1 : 0);
+            PlayerPrefs.SetInt(string.Format("{0}_star3", levelName), star3 ? 1 : 0);
 
             if (Star1 != null)
             {

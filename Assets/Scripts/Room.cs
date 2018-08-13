@@ -143,5 +143,10 @@ namespace Assets.Scripts
             bA.size *= 1.1f;
             return bA.Intersects(bB);
         }
+
+        public List<Furniture> GetPlacedFurniture()
+        {
+            return _placedFurniture.Select(f => f.Furniture).ToList();
+        }
     }
 }
