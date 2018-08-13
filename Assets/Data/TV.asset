@@ -13,4 +13,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: TV
   Icon: {fileID: 21300000, guid: d96fd3368a1bb5b40b08370ea17dab95, type: 3}
-  Prefab: {fileID: 100000, guid: b59b5916f8034c0418153a3f350fbf6f, type: 3}
+  Prefab: {fileID: 1736661481176240, guid: 12e22b02f981d634a8376b29a3af992e, type: 2}
