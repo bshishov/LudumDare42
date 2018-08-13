@@ -1,5 +1,6 @@
 ﻿using Assets.Scripts.Utils;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 namespace Assets.Scripts
 {
@@ -32,7 +33,7 @@ namespace Assets.Scripts
                 var furniture = Room.Instance.FurnitureStack.Pop();
                 if (furniture.Prefab != null)
                 {
-                    var go = GameObject.Instantiate(furniture.Prefab, Vector3.zero, Quaternion.identity);
+                    var go = GameObject.Instantiate(furniture.Prefab, new Vector3(0, 2, 0), Quaternion.identity);
                     _target = go.GetComponent<VoxelFurniture>();
                     _target.Furniture = furniture;
 
@@ -75,6 +76,9 @@ namespace Assets.Scripts
 
             _yPos = Mathf.Min(_yPos, Room.Instance.FillVolume.MaxBounds.y);
             _yPos = Mathf.Max(_yPos, Room.Instance.FillVolume.MinBounds.y);
+
+            if(EventSystem.current.IsPointerOverGameObject())
+                return;
 
 
             // Raycasts to floor
