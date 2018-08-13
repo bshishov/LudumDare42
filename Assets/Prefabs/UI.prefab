@@ -501,7 +501,7 @@ MonoBehaviour:
   FlavorText: {fileID: 114883182556911370}
   Background: {fileID: 114333158307372240}
   StarsFader: {fileID: 114189076449676304}
-  LestGo: {fileID: 0}
+  LestGo: {fileID: 114517955195062532}
   FurnitureList: {fileID: 224988296943250068}
   FurnitureItemPrefab: {fileID: 1524560384674162, guid: bcaab11b301f28f4ba12f9ff18fa322a,
     type: 2}

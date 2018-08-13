@@ -94,11 +94,13 @@ namespace Assets.Scripts.UI
         [ContextMenu("Show End")]
         public void ShowEnd()
         {
+            Show();
+
             if(LestGo != null)
                 LestGo.FadeOut();
 
             if(StarsFader != null)
-                StarsFader.FadeOut();
+                StarsFader.FadeIn();
 
             CaptionText.text = "Results";
             FlavorText.text = Room.Instance.FinishText;
