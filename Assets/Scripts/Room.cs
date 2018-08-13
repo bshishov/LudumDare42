@@ -39,6 +39,7 @@ namespace Assets.Scripts
         public List<RoomTask> FurniturePool = new List<RoomTask>();
         public List<RoomTask> FurnitureTasks = new List<RoomTask>();
         public List<FurnitureConstraint> FurnitureConstraints = new List<FurnitureConstraint>();
+        public string NextScene;
 
         private readonly VoxelVolume _objectsVolume = new VoxelVolume();
         private VoxelObject _voxelObject;
