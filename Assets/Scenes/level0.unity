@@ -8300,6 +8300,23 @@ Prefab:
       propertyPath: FurniturePool.Array.data[2].Amount
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114319676546877230, guid: 8981b365fa20ee4488aabcf3681e3fdf,
+        type: 2}
+      propertyPath: Text
+      value: Hi! I heard that you are famous furniture designer. Can you help me place
+        this stuff the best way? You can rotate any furniture pressing RMB. Oh, and
+        you can rotate a room with A and D buttons.
+      objectReference: {fileID: 0}
+    - target: {fileID: 114479227333483812, guid: 8981b365fa20ee4488aabcf3681e3fdf,
+        type: 2}
+      propertyPath: Timer
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 114319676546877230, guid: 8981b365fa20ee4488aabcf3681e3fdf,
+        type: 2}
+      propertyPath: FinishText
+      value: 'You did really great! I love it! Can you help me with other tasks? '
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8981b365fa20ee4488aabcf3681e3fdf, type: 2}
   m_IsPrefabParent: 0

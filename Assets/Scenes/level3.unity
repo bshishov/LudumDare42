@@ -2247,8 +2247,13 @@ Prefab:
     m_Modifications:
     - target: {fileID: 114319676546877230, guid: 8981b365fa20ee4488aabcf3681e3fdf,
         type: 2}
+      propertyPath: FurniturePool.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114319676546877230, guid: 8981b365fa20ee4488aabcf3681e3fdf,
+        type: 2}
       propertyPath: FurnitureTasks.Array.size
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 114287610647431358, guid: 8981b365fa20ee4488aabcf3681e3fdf,
         type: 2}
@@ -2259,6 +2264,11 @@ Prefab:
         type: 2}
       propertyPath: Volume.Data._values.Array.size
       value: 136
+      objectReference: {fileID: 0}
+    - target: {fileID: 114319676546877230, guid: 8981b365fa20ee4488aabcf3681e3fdf,
+        type: 2}
+      propertyPath: FurnitureConstraints.Array.size
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4968195524763458, guid: 8981b365fa20ee4488aabcf3681e3fdf, type: 2}
       propertyPath: m_LocalPosition.x
@@ -2296,22 +2306,22 @@ Prefab:
         type: 2}
       propertyPath: FurnitureTasks.Array.data[2].Furniture
       value: 
-      objectReference: {fileID: 11400000, guid: 1bee5ace1776d834ab8eb8c172409dfa,
+      objectReference: {fileID: 11400000, guid: b46543032c38f8948aec0ecca4ec04a9,
         type: 2}
     - target: {fileID: 114319676546877230, guid: 8981b365fa20ee4488aabcf3681e3fdf,
         type: 2}
       propertyPath: FurnitureTasks.Array.data[2].Amount
-      value: 10
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114319676546877230, guid: 8981b365fa20ee4488aabcf3681e3fdf,
         type: 2}
       propertyPath: FurnitureTasks.Array.data[0].Amount
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 114319676546877230, guid: 8981b365fa20ee4488aabcf3681e3fdf,
         type: 2}
       propertyPath: FurnitureTasks.Array.data[1].Amount
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114287610647431358, guid: 8981b365fa20ee4488aabcf3681e3fdf,
         type: 2}
@@ -8153,6 +8163,120 @@ Prefab:
       propertyPath: Volume.Data._keys.Array.data[220].y
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 114319676546877230, guid: 8981b365fa20ee4488aabcf3681e3fdf,
+        type: 2}
+      propertyPath: Text
+      value: Do you see this room with balcony? I think it will be great to sunbath
+        here! And maybe <color=blue> heating machine near sunbed </color> in case
+        it will be too cold. Don't forget my other favorite items!
+      objectReference: {fileID: 0}
+    - target: {fileID: 114319676546877230, guid: 8981b365fa20ee4488aabcf3681e3fdf,
+        type: 2}
+      propertyPath: FinishText
+      value: That's terrific! Maybe it will be not so comfortable to sunbath, but
+        still... I think I can live with that.
+      objectReference: {fileID: 0}
+    - target: {fileID: 114319676546877230, guid: 8981b365fa20ee4488aabcf3681e3fdf,
+        type: 2}
+      propertyPath: FurniturePool.Array.data[0].Furniture
+      value: 
+      objectReference: {fileID: 11400000, guid: 81932720a226d09429aeeff547fd78d8,
+        type: 2}
+    - target: {fileID: 114319676546877230, guid: 8981b365fa20ee4488aabcf3681e3fdf,
+        type: 2}
+      propertyPath: FurniturePool.Array.data[0].Amount
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114319676546877230, guid: 8981b365fa20ee4488aabcf3681e3fdf,
+        type: 2}
+      propertyPath: FurniturePool.Array.data[1].Furniture
+      value: 
+      objectReference: {fileID: 11400000, guid: 30d64c76864250040882ce44daa0ad0c,
+        type: 2}
+    - target: {fileID: 114319676546877230, guid: 8981b365fa20ee4488aabcf3681e3fdf,
+        type: 2}
+      propertyPath: FurniturePool.Array.data[1].Amount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114319676546877230, guid: 8981b365fa20ee4488aabcf3681e3fdf,
+        type: 2}
+      propertyPath: FurniturePool.Array.data[2].Furniture
+      value: 
+      objectReference: {fileID: 11400000, guid: b46543032c38f8948aec0ecca4ec04a9,
+        type: 2}
+    - target: {fileID: 114319676546877230, guid: 8981b365fa20ee4488aabcf3681e3fdf,
+        type: 2}
+      propertyPath: FurniturePool.Array.data[2].Amount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114319676546877230, guid: 8981b365fa20ee4488aabcf3681e3fdf,
+        type: 2}
+      propertyPath: FurniturePool.Array.data[3].Furniture
+      value: 
+      objectReference: {fileID: 11400000, guid: 41026dd0cf2d73247a4d68c9521e5e58,
+        type: 2}
+    - target: {fileID: 114319676546877230, guid: 8981b365fa20ee4488aabcf3681e3fdf,
+        type: 2}
+      propertyPath: FurniturePool.Array.data[3].Amount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114319676546877230, guid: 8981b365fa20ee4488aabcf3681e3fdf,
+        type: 2}
+      propertyPath: FurniturePool.Array.data[4].Furniture
+      value: 
+      objectReference: {fileID: 11400000, guid: a298fdb5b5d106b4ebb2c768d411a536,
+        type: 2}
+    - target: {fileID: 114319676546877230, guid: 8981b365fa20ee4488aabcf3681e3fdf,
+        type: 2}
+      propertyPath: FurniturePool.Array.data[4].Amount
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114319676546877230, guid: 8981b365fa20ee4488aabcf3681e3fdf,
+        type: 2}
+      propertyPath: FurnitureTasks.Array.data[3].Furniture
+      value: 
+      objectReference: {fileID: 11400000, guid: 41026dd0cf2d73247a4d68c9521e5e58,
+        type: 2}
+    - target: {fileID: 114319676546877230, guid: 8981b365fa20ee4488aabcf3681e3fdf,
+        type: 2}
+      propertyPath: FurnitureTasks.Array.data[3].Amount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114319676546877230, guid: 8981b365fa20ee4488aabcf3681e3fdf,
+        type: 2}
+      propertyPath: FurnitureTasks.Array.data[4].Furniture
+      value: 
+      objectReference: {fileID: 11400000, guid: a298fdb5b5d106b4ebb2c768d411a536,
+        type: 2}
+    - target: {fileID: 114319676546877230, guid: 8981b365fa20ee4488aabcf3681e3fdf,
+        type: 2}
+      propertyPath: FurnitureTasks.Array.data[4].Amount
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114319676546877230, guid: 8981b365fa20ee4488aabcf3681e3fdf,
+        type: 2}
+      propertyPath: FurnitureTasks.Array.data[0].Furniture
+      value: 
+      objectReference: {fileID: 11400000, guid: 81932720a226d09429aeeff547fd78d8,
+        type: 2}
+    - target: {fileID: 114319676546877230, guid: 8981b365fa20ee4488aabcf3681e3fdf,
+        type: 2}
+      propertyPath: FurnitureTasks.Array.data[1].Furniture
+      value: 
+      objectReference: {fileID: 11400000, guid: 30d64c76864250040882ce44daa0ad0c,
+        type: 2}
+    - target: {fileID: 114319676546877230, guid: 8981b365fa20ee4488aabcf3681e3fdf,
+        type: 2}
+      propertyPath: FurnitureConstraints.Array.data[0].A
+      value: 
+      objectReference: {fileID: 11400000, guid: 30d64c76864250040882ce44daa0ad0c,
+        type: 2}
+    - target: {fileID: 114319676546877230, guid: 8981b365fa20ee4488aabcf3681e3fdf,
+        type: 2}
+      propertyPath: FurnitureConstraints.Array.data[0].B
+      value: 
+      objectReference: {fileID: 11400000, guid: 81932720a226d09429aeeff547fd78d8,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8981b365fa20ee4488aabcf3681e3fdf, type: 2}
   m_IsPrefabParent: 0

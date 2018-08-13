@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Name: BookShelf2
   m_EditorClassIdentifier: 
   Name: Book Shelf
-  Icon: {fileID: 0}
+  Icon: {fileID: 21300000, guid: 8d213f7c8713a8b49943b2d79f28e4ad, type: 3}
   Prefab: {fileID: 1922627656722378, guid: 34af31b51d89650488cd34b80abd65fc, type: 2}
