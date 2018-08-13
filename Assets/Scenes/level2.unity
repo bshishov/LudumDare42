@@ -8349,15 +8349,20 @@ Prefab:
     - target: {fileID: 114319676546877230, guid: 8981b365fa20ee4488aabcf3681e3fdf,
         type: 2}
       propertyPath: Text
-      value: I am making a guest room. It should include everything for a lot of my
-        friends (even jakuzzi, yes). They really like to read, so <color=blue> at
-        least one bed should be near to different bookshelfs </color>. But hurry up,
-        they will be hear in a few minutes!
+      value: This guest room should include everything for  my friends (even jakuzzi,
+        yes). They really like to read, so <color=blue> at least one bed should be
+        near to different bookshelfs </color>. But hurry up, they will be hear in
+        a few minutes!
       objectReference: {fileID: 0}
     - target: {fileID: 114319676546877230, guid: 8981b365fa20ee4488aabcf3681e3fdf,
         type: 2}
       propertyPath: FinishText
       value: It quite tight, but I think they can handle it (I don't like them anyway).
+      objectReference: {fileID: 0}
+    - target: {fileID: 114319676546877230, guid: 8981b365fa20ee4488aabcf3681e3fdf,
+        type: 2}
+      propertyPath: NextScene
+      value: level3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8981b365fa20ee4488aabcf3681e3fdf, type: 2}

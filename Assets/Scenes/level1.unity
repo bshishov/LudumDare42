@@ -6806,6 +6806,11 @@ Prefab:
       propertyPath: FinishText
       value: Well, I think it looks good. Nobody will see it, anyway.
       objectReference: {fileID: 0}
+    - target: {fileID: 114319676546877230, guid: 8981b365fa20ee4488aabcf3681e3fdf,
+        type: 2}
+      propertyPath: NextScene
+      value: level2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8981b365fa20ee4488aabcf3681e3fdf, type: 2}
   m_IsPrefabParent: 0
