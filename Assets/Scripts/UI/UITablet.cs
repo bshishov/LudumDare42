@@ -24,11 +24,21 @@ namespace Assets.Scripts.UI
         public Image Star2;
         public Image Star3;
 
+        [Header("Sounds")]
+        public AudioClipWithVolume OpenSound;
+        public AudioClipWithVolume CloseSound;
+        public AudioClipWithVolume CheckMarkSound;
+        public AudioClipWithVolume Star1Sound;
+        public AudioClipWithVolume Star2Sound;
+        public AudioClipWithVolume Star3Sound;
+        public AudioClipWithVolume LevelLoaded;
+
         private UIMover _mover;
         private readonly List<UIFurnitureItem> _furnitureItems = new List<UIFurnitureItem>();
 
         private void Start()
         {
+            SoundManager.Instance.Play(LevelLoaded);
             Time.timeScale = 0f;
             _mover = GetComponent<UIMover>();
 
@@ -85,6 +95,7 @@ namespace Assets.Scripts.UI
         [ContextMenu("Hide")]
         public void Hide()
         {
+            SoundManager.Instance.Play(CloseSound);
             Time.timeScale = 1f;
             if (Background != null)
                 Background.FadeOut();
@@ -96,6 +107,7 @@ namespace Assets.Scripts.UI
         [ContextMenu("Show")]
         public void Show()
         {
+            SoundManager.Instance.Play(OpenSound);
             Time.timeScale = 0f;
             if (Background != null)
             {
@@ -153,6 +165,7 @@ namespace Assets.Scripts.UI
             yield return new WaitForSecondsRealtime(startDelay);
 
             var placedAll = Room.Instance.GetPlacedFurniture();
+            var pitch = 1f;
             foreach (var uiFurnitureItem in _furnitureItems)
             {
                 var placed = placedAll.FirstOrDefault(p => p == uiFurnitureItem.Furniture);
@@ -160,6 +173,8 @@ namespace Assets.Scripts.UI
                 {
                     placedAll.Remove(placed);
                     uiFurnitureItem.SetCheckmark(true);
+                    SoundManager.Instance.Play(CheckMarkSound, pitch: pitch);
+                    pitch += 0.01f;
                 }
                 yield return new WaitForSecondsRealtime(furnitureDelay);
             }
@@ -181,6 +196,8 @@ namespace Assets.Scripts.UI
 
             if (Star1 != null)
             {
+                if(star1)
+                    SoundManager.Instance.Play(Star1Sound);
                 Star1.gameObject.SetActive(star1);
                 yield return new WaitForSecondsRealtime(starDelay);
             }
@@ -190,12 +207,16 @@ namespace Assets.Scripts.UI
 
             if (Star2 != null)
             {
+                if(star2)
+                    SoundManager.Instance.Play(Star2Sound);
                 Star2.gameObject.SetActive(star2);
                 yield return new WaitForSecondsRealtime(starDelay);
             }
 
             if (Star3 != null)
             {
+                if (star3)
+                    SoundManager.Instance.Play(Star3Sound);
                 Star3.gameObject.SetActive(star3);
             }
         }

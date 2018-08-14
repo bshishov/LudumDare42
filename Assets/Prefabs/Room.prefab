@@ -968,6 +968,8 @@ MonoBehaviour:
       - Type: 0
       - Type: 0
       - Type: 0
+    MinBounds: {x: 0, y: 0, z: 0}
+    MaxBounds: {x: 0, y: 0, z: 0}
   DrawGizmos: 1
   CellColor: {r: 0.029083636, g: 0.0032439474, b: 0.1102941, a: 0.241}
 --- !u!114 &114319676546877230
@@ -981,11 +983,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd074734ee950974a89baedfd9cbc838, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Text: 
+  FinishText: 
+  FurniturePool: []
   FurnitureTasks:
   - Furniture: {fileID: 11400000, guid: 73e299babc760af40a7054c978aabf66, type: 2}
     Amount: 10
   - Furniture: {fileID: 11400000, guid: 3414222fdea043e4888df936d593b0ce, type: 2}
     Amount: 10
+  FurnitureConstraints: []
+  NextScene: 
   ObjectsVoxelObject: {fileID: 114398976044583072}
 --- !u!114 &114398976044583072
 MonoBehaviour:
@@ -1003,6 +1010,8 @@ MonoBehaviour:
     Data:
       _keys: []
       _values: []
+    MinBounds: {x: 0, y: 0, z: 0}
+    MaxBounds: {x: 0, y: 0, z: 0}
   DrawGizmos: 1
   CellColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!114 &114479227333483812
@@ -1016,4 +1025,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3271a9b20a6a23b4e8e88ac6d5744fa4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Timer: 10
   RedVoxel: {fileID: 2100000, guid: caf8c8bcff845c84b9dcac1945d4089b, type: 2}
+  RotateSound:
+    Clip: {fileID: 8300000, guid: ea65ce7e0ec3e184087ee631aae9839d, type: 3}
+    VolumeModifier: 0.5
+  NewSound:
+    Clip: {fileID: 0}
+    VolumeModifier: 1
+  PlaceSound:
+    Clip: {fileID: 8300000, guid: 1e7b5592f6ede894b8abaa7a0941ae11, type: 3}
+    VolumeModifier: 0.5
+  SkipSound:
+    Clip: {fileID: 0}
+    VolumeModifier: 1

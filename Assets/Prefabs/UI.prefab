@@ -110,6 +110,7 @@ GameObject:
   - component: {fileID: 114218971785203376}
   - component: {fileID: 114738473023644212}
   - component: {fileID: 114412256885562248}
+  - component: {fileID: 114644348359176050}
   m_Layer: 5
   m_Name: Next
   m_TagString: Untagged
@@ -147,6 +148,7 @@ GameObject:
   - component: {fileID: 114849014832705664}
   - component: {fileID: 114562629774164336}
   - component: {fileID: 114382970289238316}
+  - component: {fileID: 114797628185864124}
   m_Layer: 5
   m_Name: Menu
   m_TagString: Untagged
@@ -272,6 +274,7 @@ GameObject:
   - component: {fileID: 114928401205425340}
   - component: {fileID: 114733318501675878}
   - component: {fileID: 114988558670009538}
+  - component: {fileID: 114681215591553946}
   m_Layer: 5
   m_Name: Restart
   m_TagString: Untagged
@@ -326,6 +329,7 @@ GameObject:
   - component: {fileID: 114454907418921562}
   - component: {fileID: 114754477882450176}
   - component: {fileID: 114487424789165946}
+  - component: {fileID: 114015919258581660}
   m_Layer: 5
   m_Name: Start
   m_TagString: Untagged
@@ -433,6 +437,7 @@ GameObject:
   - component: {fileID: 222421880188178796}
   - component: {fileID: 114299890661814008}
   - component: {fileID: 114860417283519418}
+  - component: {fileID: 114971272677745872}
   m_Layer: 5
   m_Name: ShowButton
   m_TagString: Untagged
@@ -583,6 +588,45 @@ MonoBehaviour:
   Star1: {fileID: 114488157166358462}
   Star2: {fileID: 114146836487631266}
   Star3: {fileID: 114300992664811758}
+  OpenSound:
+    Clip: {fileID: 8300000, guid: 0ed41c18fed51a144a5946d396ce8c6c, type: 3}
+    VolumeModifier: 1
+  CloseSound:
+    Clip: {fileID: 8300000, guid: 0ed41c18fed51a144a5946d396ce8c6c, type: 3}
+    VolumeModifier: 1
+  CheckMarkSound:
+    Clip: {fileID: 8300000, guid: 3469cc454efed6a4ab8b737fc9abd76a, type: 3}
+    VolumeModifier: 0.6
+  Star1Sound:
+    Clip: {fileID: 8300000, guid: f5155d1214c6ce04f9f89f14de4816cd, type: 3}
+    VolumeModifier: 0.8
+  Star2Sound:
+    Clip: {fileID: 8300000, guid: 1223f4e5e429e3847b7bfc2ad17c49d0, type: 3}
+    VolumeModifier: 0.8
+  Star3Sound:
+    Clip: {fileID: 8300000, guid: 934809e4c0acb024f8fe694bc89a1c3e, type: 3}
+    VolumeModifier: 0.8
+  LevelLoaded:
+    Clip: {fileID: 8300000, guid: 137477e64a182c34eafb825b3451714c, type: 3}
+    VolumeModifier: 1
+--- !u!114 &114015919258581660
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1533614174797266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: caa94a7a3e79cbe4ba4d6d834dc53aeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UpdateCursors: 1
+  HoverSound:
+    Clip: {fileID: 8300000, guid: 36f9da9b02ed55a4296d81ed72eb5986, type: 3}
+    VolumeModifier: 0.5
+  ClickSound:
+    Clip: {fileID: 8300000, guid: c6bef2c776e268f44806e24f25fa9bd7, type: 3}
+    VolumeModifier: 0
 --- !u!114 &114042976776409368
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1321,7 +1365,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 0.97626776, g: 1, b: 0.86764705, a: 1}
-    m_HighlightedColor: {r: 0.97647065, g: 1, b: 0.86666673, a: 1}
+    m_HighlightedColor: {r: 0.76474416, g: 0.8088235, b: 0.5590398, a: 1}
     m_PressedColor: {r: 0.78676474, g: 0.75436854, b: 0.6189987, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -1367,6 +1411,42 @@ MonoBehaviour:
   Icon: {fileID: 114086700994541372}
   CheckMark: {fileID: 114310871158292148}
   RequiredTint: {r: 0, g: 1, b: 1, a: 1}
+--- !u!114 &114644348359176050
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1074870259146414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: caa94a7a3e79cbe4ba4d6d834dc53aeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UpdateCursors: 1
+  HoverSound:
+    Clip: {fileID: 8300000, guid: 36f9da9b02ed55a4296d81ed72eb5986, type: 3}
+    VolumeModifier: 0.5
+  ClickSound:
+    Clip: {fileID: 8300000, guid: c6bef2c776e268f44806e24f25fa9bd7, type: 3}
+    VolumeModifier: 1
+--- !u!114 &114681215591553946
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1427250654644612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: caa94a7a3e79cbe4ba4d6d834dc53aeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UpdateCursors: 1
+  HoverSound:
+    Clip: {fileID: 8300000, guid: 36f9da9b02ed55a4296d81ed72eb5986, type: 3}
+    VolumeModifier: 0.5
+  ClickSound:
+    Clip: {fileID: 8300000, guid: c6bef2c776e268f44806e24f25fa9bd7, type: 3}
+    VolumeModifier: 1
 --- !u!114 &114727146820365428
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1414,7 +1494,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 0.97626776, g: 1, b: 0.86764705, a: 1}
-    m_HighlightedColor: {r: 0.97647065, g: 1, b: 0.86666673, a: 1}
+    m_HighlightedColor: {r: 0.76474416, g: 0.8088235, b: 0.5590398, a: 1}
     m_PressedColor: {r: 0.78676474, g: 0.75436854, b: 0.6189987, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -1466,7 +1546,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 0.97626776, g: 1, b: 0.86764705, a: 1}
-    m_HighlightedColor: {r: 0.97647065, g: 1, b: 0.86666673, a: 1}
+    m_HighlightedColor: {r: 0.76474416, g: 0.8088235, b: 0.5590398, a: 1}
     m_PressedColor: {r: 0.78676474, g: 0.75436854, b: 0.6189987, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -1545,7 +1625,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 0.97626776, g: 1, b: 0.86764705, a: 1}
-    m_HighlightedColor: {r: 0.97647065, g: 1, b: 0.86666673, a: 1}
+    m_HighlightedColor: {r: 0.76474416, g: 0.8088235, b: 0.5590398, a: 1}
     m_PressedColor: {r: 0.78676474, g: 0.75436854, b: 0.6189987, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -1685,6 +1765,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Arrow: {fileID: 224110872110816512}
+--- !u!114 &114797628185864124
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1173595613668546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: caa94a7a3e79cbe4ba4d6d834dc53aeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UpdateCursors: 1
+  HoverSound:
+    Clip: {fileID: 8300000, guid: 36f9da9b02ed55a4296d81ed72eb5986, type: 3}
+    VolumeModifier: 0.5
+  ClickSound:
+    Clip: {fileID: 8300000, guid: c6bef2c776e268f44806e24f25fa9bd7, type: 3}
+    VolumeModifier: 1
 --- !u!114 &114849014832705664
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1948,6 +2046,24 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114971272677745872
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1760466322827448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: caa94a7a3e79cbe4ba4d6d834dc53aeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UpdateCursors: 1
+  HoverSound:
+    Clip: {fileID: 0}
+    VolumeModifier: 1
+  ClickSound:
+    Clip: {fileID: 0}
+    VolumeModifier: 1
 --- !u!114 &114983918362955820
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2268,8 +2384,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000029563904, y: 0.7662096}
-  m_SizeDelta: {x: 41.38, y: 55.11}
+  m_AnchoredPosition: {x: 1.7, y: 0.1}
+  m_SizeDelta: {x: 83.18, y: 110.78}
   m_Pivot: {x: 0.49999976, y: 0.19454205}
 --- !u!224 &224149434188248432
 RectTransform:
@@ -2671,8 +2787,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -104, y: 99}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: -160.7, y: 161.5}
+  m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224926448056172374
 RectTransform:

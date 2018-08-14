@@ -9,6 +9,10 @@ namespace Assets.Scripts.UI
         public Vector2 TargetPosition;
         public bool MoveToTargetOnStart = false;
 
+        [Header("Sound")]
+        public AudioClipWithVolume MoveToTargetSound;
+        public AudioClipWithVolume MoveToSourceSound;
+
         private Vector3 _origianlPosition;
         private Vector3 _sourcePosition;
         private Vector3 _targetPosition;
@@ -55,6 +59,7 @@ namespace Assets.Scripts.UI
             if (_isAnimating)
                 return;
 
+            SoundManager.Instance.Play(MoveToTargetSound);
             _targetPosition = TargetPosition;
             _isAnimating = true;
             _anim = 0f;
@@ -66,6 +71,7 @@ namespace Assets.Scripts.UI
             if(_isAnimating)
                 return;
 
+            SoundManager.Instance.Play(MoveToSourceSound);
             _targetPosition = _origianlPosition;
             _isAnimating = true;
             _anim = 0f;

@@ -313,6 +313,21 @@ Prefab:
       propertyPath: m_Text
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 114372298767177512, guid: 45e4e5afc3e96da47ad412bc387e5497,
+        type: 2}
+      propertyPath: m_Colors.m_HighlightedColor.r
+      value: 0.66176474
+      objectReference: {fileID: 0}
+    - target: {fileID: 114372298767177512, guid: 45e4e5afc3e96da47ad412bc387e5497,
+        type: 2}
+      propertyPath: m_Colors.m_HighlightedColor.g
+      value: 0.6307571
+      objectReference: {fileID: 0}
+    - target: {fileID: 114372298767177512, guid: 45e4e5afc3e96da47ad412bc387e5497,
+        type: 2}
+      propertyPath: m_Colors.m_HighlightedColor.b
+      value: 0.4573962
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 45e4e5afc3e96da47ad412bc387e5497, type: 2}
   m_IsPrefabParent: 0
@@ -321,6 +336,29 @@ RectTransform:
   m_PrefabParentObject: {fileID: 224042041795249646, guid: 45e4e5afc3e96da47ad412bc387e5497,
     type: 2}
   m_PrefabInternal: {fileID: 24137890}
+--- !u!1 &24137892 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1978476603007510, guid: 45e4e5afc3e96da47ad412bc387e5497,
+    type: 2}
+  m_PrefabInternal: {fileID: 24137890}
+--- !u!114 &24137893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 24137892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: caa94a7a3e79cbe4ba4d6d834dc53aeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UpdateCursors: 1
+  HoverSound:
+    Clip: {fileID: 8300000, guid: 36f9da9b02ed55a4296d81ed72eb5986, type: 3}
+    VolumeModifier: 0.5
+  ClickSound:
+    Clip: {fileID: 8300000, guid: c6bef2c776e268f44806e24f25fa9bd7, type: 3}
+    VolumeModifier: 0.6
 --- !u!1 &24263466
 GameObject:
   m_ObjectHideFlags: 0
@@ -572,6 +610,21 @@ Prefab:
       propertyPath: LevelName
       value: level0
       objectReference: {fileID: 0}
+    - target: {fileID: 114372298767177512, guid: 45e4e5afc3e96da47ad412bc387e5497,
+        type: 2}
+      propertyPath: m_Colors.m_HighlightedColor.r
+      value: 0.66176474
+      objectReference: {fileID: 0}
+    - target: {fileID: 114372298767177512, guid: 45e4e5afc3e96da47ad412bc387e5497,
+        type: 2}
+      propertyPath: m_Colors.m_HighlightedColor.g
+      value: 0.6307571
+      objectReference: {fileID: 0}
+    - target: {fileID: 114372298767177512, guid: 45e4e5afc3e96da47ad412bc387e5497,
+        type: 2}
+      propertyPath: m_Colors.m_HighlightedColor.b
+      value: 0.4573962
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 45e4e5afc3e96da47ad412bc387e5497, type: 2}
   m_IsPrefabParent: 0
@@ -580,6 +633,29 @@ RectTransform:
   m_PrefabParentObject: {fileID: 224042041795249646, guid: 45e4e5afc3e96da47ad412bc387e5497,
     type: 2}
   m_PrefabInternal: {fileID: 222605213}
+--- !u!1 &222605215 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1978476603007510, guid: 45e4e5afc3e96da47ad412bc387e5497,
+    type: 2}
+  m_PrefabInternal: {fileID: 222605213}
+--- !u!114 &222605216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 222605215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: caa94a7a3e79cbe4ba4d6d834dc53aeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UpdateCursors: 1
+  HoverSound:
+    Clip: {fileID: 8300000, guid: 36f9da9b02ed55a4296d81ed72eb5986, type: 3}
+    VolumeModifier: 0.5
+  ClickSound:
+    Clip: {fileID: 8300000, guid: c6bef2c776e268f44806e24f25fa9bd7, type: 3}
+    VolumeModifier: 0.6
 --- !u!1 &225732984
 GameObject:
   m_ObjectHideFlags: 0
@@ -879,6 +955,12 @@ MonoBehaviour:
   TravelTime: 0.5
   TargetPosition: {x: 0, y: 1000}
   MoveToTargetOnStart: 1
+  MoveToTargetSound:
+    Clip: {fileID: 8300000, guid: 0ed41c18fed51a144a5946d396ce8c6c, type: 3}
+    VolumeModifier: 1
+  MoveToSourceSound:
+    Clip: {fileID: 0}
+    VolumeModifier: 1
 --- !u!114 &313160219
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1038,6 +1120,21 @@ Prefab:
       propertyPath: m_Text
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114372298767177512, guid: 45e4e5afc3e96da47ad412bc387e5497,
+        type: 2}
+      propertyPath: m_Colors.m_HighlightedColor.r
+      value: 0.66176474
+      objectReference: {fileID: 0}
+    - target: {fileID: 114372298767177512, guid: 45e4e5afc3e96da47ad412bc387e5497,
+        type: 2}
+      propertyPath: m_Colors.m_HighlightedColor.g
+      value: 0.6307571
+      objectReference: {fileID: 0}
+    - target: {fileID: 114372298767177512, guid: 45e4e5afc3e96da47ad412bc387e5497,
+        type: 2}
+      propertyPath: m_Colors.m_HighlightedColor.b
+      value: 0.4573962
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 45e4e5afc3e96da47ad412bc387e5497, type: 2}
   m_IsPrefabParent: 0
@@ -1046,6 +1143,29 @@ RectTransform:
   m_PrefabParentObject: {fileID: 224042041795249646, guid: 45e4e5afc3e96da47ad412bc387e5497,
     type: 2}
   m_PrefabInternal: {fileID: 352975234}
+--- !u!1 &352975236 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1978476603007510, guid: 45e4e5afc3e96da47ad412bc387e5497,
+    type: 2}
+  m_PrefabInternal: {fileID: 352975234}
+--- !u!114 &352975237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 352975236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: caa94a7a3e79cbe4ba4d6d834dc53aeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UpdateCursors: 1
+  HoverSound:
+    Clip: {fileID: 8300000, guid: 36f9da9b02ed55a4296d81ed72eb5986, type: 3}
+    VolumeModifier: 0.5
+  ClickSound:
+    Clip: {fileID: 8300000, guid: c6bef2c776e268f44806e24f25fa9bd7, type: 3}
+    VolumeModifier: 0.6
 --- !u!1 &362596766
 GameObject:
   m_ObjectHideFlags: 0
@@ -1059,6 +1179,7 @@ GameObject:
   - component: {fileID: 362596770}
   - component: {fileID: 362596769}
   - component: {fileID: 362596768}
+  - component: {fileID: 362596772}
   m_Layer: 5
   m_Name: Back
   m_TagString: Untagged
@@ -1200,6 +1321,24 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 362596766}
+--- !u!114 &362596772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 362596766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: caa94a7a3e79cbe4ba4d6d834dc53aeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UpdateCursors: 1
+  HoverSound:
+    Clip: {fileID: 8300000, guid: 36f9da9b02ed55a4296d81ed72eb5986, type: 3}
+    VolumeModifier: 0.5
+  ClickSound:
+    Clip: {fileID: 8300000, guid: c6bef2c776e268f44806e24f25fa9bd7, type: 3}
+    VolumeModifier: 0.6
 --- !u!1 &429897939
 GameObject:
   m_ObjectHideFlags: 0
@@ -1520,6 +1659,21 @@ Prefab:
       propertyPath: m_Text
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 114372298767177512, guid: 45e4e5afc3e96da47ad412bc387e5497,
+        type: 2}
+      propertyPath: m_Colors.m_HighlightedColor.r
+      value: 0.66176474
+      objectReference: {fileID: 0}
+    - target: {fileID: 114372298767177512, guid: 45e4e5afc3e96da47ad412bc387e5497,
+        type: 2}
+      propertyPath: m_Colors.m_HighlightedColor.g
+      value: 0.6307571
+      objectReference: {fileID: 0}
+    - target: {fileID: 114372298767177512, guid: 45e4e5afc3e96da47ad412bc387e5497,
+        type: 2}
+      propertyPath: m_Colors.m_HighlightedColor.b
+      value: 0.4573962
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 45e4e5afc3e96da47ad412bc387e5497, type: 2}
   m_IsPrefabParent: 0
@@ -1528,6 +1682,29 @@ RectTransform:
   m_PrefabParentObject: {fileID: 224042041795249646, guid: 45e4e5afc3e96da47ad412bc387e5497,
     type: 2}
   m_PrefabInternal: {fileID: 470806464}
+--- !u!1 &470806466 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1978476603007510, guid: 45e4e5afc3e96da47ad412bc387e5497,
+    type: 2}
+  m_PrefabInternal: {fileID: 470806464}
+--- !u!114 &470806467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 470806466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: caa94a7a3e79cbe4ba4d6d834dc53aeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UpdateCursors: 1
+  HoverSound:
+    Clip: {fileID: 8300000, guid: 36f9da9b02ed55a4296d81ed72eb5986, type: 3}
+    VolumeModifier: 0.5
+  ClickSound:
+    Clip: {fileID: 8300000, guid: c6bef2c776e268f44806e24f25fa9bd7, type: 3}
+    VolumeModifier: 0.6
 --- !u!1001 &491094708
 Prefab:
   m_ObjectHideFlags: 0
@@ -1654,6 +1831,21 @@ Prefab:
       propertyPath: m_Text
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 114372298767177512, guid: 45e4e5afc3e96da47ad412bc387e5497,
+        type: 2}
+      propertyPath: m_Colors.m_HighlightedColor.r
+      value: 0.66176474
+      objectReference: {fileID: 0}
+    - target: {fileID: 114372298767177512, guid: 45e4e5afc3e96da47ad412bc387e5497,
+        type: 2}
+      propertyPath: m_Colors.m_HighlightedColor.g
+      value: 0.6307571
+      objectReference: {fileID: 0}
+    - target: {fileID: 114372298767177512, guid: 45e4e5afc3e96da47ad412bc387e5497,
+        type: 2}
+      propertyPath: m_Colors.m_HighlightedColor.b
+      value: 0.4573962
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 45e4e5afc3e96da47ad412bc387e5497, type: 2}
   m_IsPrefabParent: 0
@@ -1662,6 +1854,29 @@ RectTransform:
   m_PrefabParentObject: {fileID: 224042041795249646, guid: 45e4e5afc3e96da47ad412bc387e5497,
     type: 2}
   m_PrefabInternal: {fileID: 491094708}
+--- !u!1 &491094710 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1978476603007510, guid: 45e4e5afc3e96da47ad412bc387e5497,
+    type: 2}
+  m_PrefabInternal: {fileID: 491094708}
+--- !u!114 &491094711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 491094710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: caa94a7a3e79cbe4ba4d6d834dc53aeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UpdateCursors: 1
+  HoverSound:
+    Clip: {fileID: 8300000, guid: 36f9da9b02ed55a4296d81ed72eb5986, type: 3}
+    VolumeModifier: 0.5
+  ClickSound:
+    Clip: {fileID: 8300000, guid: c6bef2c776e268f44806e24f25fa9bd7, type: 3}
+    VolumeModifier: 0.6
 --- !u!1 &502702877
 GameObject:
   m_ObjectHideFlags: 0
@@ -1857,6 +2072,21 @@ Prefab:
       propertyPath: m_Text
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 114372298767177512, guid: 45e4e5afc3e96da47ad412bc387e5497,
+        type: 2}
+      propertyPath: m_Colors.m_HighlightedColor.r
+      value: 0.66176474
+      objectReference: {fileID: 0}
+    - target: {fileID: 114372298767177512, guid: 45e4e5afc3e96da47ad412bc387e5497,
+        type: 2}
+      propertyPath: m_Colors.m_HighlightedColor.g
+      value: 0.6307571
+      objectReference: {fileID: 0}
+    - target: {fileID: 114372298767177512, guid: 45e4e5afc3e96da47ad412bc387e5497,
+        type: 2}
+      propertyPath: m_Colors.m_HighlightedColor.b
+      value: 0.4573962
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 45e4e5afc3e96da47ad412bc387e5497, type: 2}
   m_IsPrefabParent: 0
@@ -1865,6 +2095,29 @@ RectTransform:
   m_PrefabParentObject: {fileID: 224042041795249646, guid: 45e4e5afc3e96da47ad412bc387e5497,
     type: 2}
   m_PrefabInternal: {fileID: 528046499}
+--- !u!1 &528046501 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1978476603007510, guid: 45e4e5afc3e96da47ad412bc387e5497,
+    type: 2}
+  m_PrefabInternal: {fileID: 528046499}
+--- !u!114 &528046502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 528046501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: caa94a7a3e79cbe4ba4d6d834dc53aeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UpdateCursors: 1
+  HoverSound:
+    Clip: {fileID: 8300000, guid: 36f9da9b02ed55a4296d81ed72eb5986, type: 3}
+    VolumeModifier: 0.5
+  ClickSound:
+    Clip: {fileID: 8300000, guid: c6bef2c776e268f44806e24f25fa9bd7, type: 3}
+    VolumeModifier: 0.6
 --- !u!1 &553006120
 GameObject:
   m_ObjectHideFlags: 0
@@ -1878,6 +2131,7 @@ GameObject:
   - component: {fileID: 553006124}
   - component: {fileID: 553006123}
   - component: {fileID: 553006122}
+  - component: {fileID: 553006126}
   m_Layer: 5
   m_Name: Back
   m_TagString: Untagged
@@ -2019,6 +2273,24 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 553006120}
+--- !u!114 &553006126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 553006120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: caa94a7a3e79cbe4ba4d6d834dc53aeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UpdateCursors: 1
+  HoverSound:
+    Clip: {fileID: 8300000, guid: 36f9da9b02ed55a4296d81ed72eb5986, type: 3}
+    VolumeModifier: 0.5
+  ClickSound:
+    Clip: {fileID: 8300000, guid: c6bef2c776e268f44806e24f25fa9bd7, type: 3}
+    VolumeModifier: 0.6
 --- !u!1 &595905474
 GameObject:
   m_ObjectHideFlags: 0
@@ -2223,6 +2495,21 @@ Prefab:
       propertyPath: m_Text
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 114372298767177512, guid: 45e4e5afc3e96da47ad412bc387e5497,
+        type: 2}
+      propertyPath: m_Colors.m_HighlightedColor.r
+      value: 0.66176474
+      objectReference: {fileID: 0}
+    - target: {fileID: 114372298767177512, guid: 45e4e5afc3e96da47ad412bc387e5497,
+        type: 2}
+      propertyPath: m_Colors.m_HighlightedColor.g
+      value: 0.6307571
+      objectReference: {fileID: 0}
+    - target: {fileID: 114372298767177512, guid: 45e4e5afc3e96da47ad412bc387e5497,
+        type: 2}
+      propertyPath: m_Colors.m_HighlightedColor.b
+      value: 0.4573962
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 45e4e5afc3e96da47ad412bc387e5497, type: 2}
   m_IsPrefabParent: 0
@@ -2231,6 +2518,29 @@ RectTransform:
   m_PrefabParentObject: {fileID: 224042041795249646, guid: 45e4e5afc3e96da47ad412bc387e5497,
     type: 2}
   m_PrefabInternal: {fileID: 603627053}
+--- !u!1 &603627055 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1978476603007510, guid: 45e4e5afc3e96da47ad412bc387e5497,
+    type: 2}
+  m_PrefabInternal: {fileID: 603627053}
+--- !u!114 &603627056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 603627055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: caa94a7a3e79cbe4ba4d6d834dc53aeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UpdateCursors: 1
+  HoverSound:
+    Clip: {fileID: 8300000, guid: 36f9da9b02ed55a4296d81ed72eb5986, type: 3}
+    VolumeModifier: 0.5
+  ClickSound:
+    Clip: {fileID: 8300000, guid: c6bef2c776e268f44806e24f25fa9bd7, type: 3}
+    VolumeModifier: 0.6
 --- !u!1 &725083516
 GameObject:
   m_ObjectHideFlags: 0
@@ -2431,6 +2741,21 @@ Prefab:
       propertyPath: m_Text
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 114372298767177512, guid: 45e4e5afc3e96da47ad412bc387e5497,
+        type: 2}
+      propertyPath: m_Colors.m_HighlightedColor.r
+      value: 0.66176474
+      objectReference: {fileID: 0}
+    - target: {fileID: 114372298767177512, guid: 45e4e5afc3e96da47ad412bc387e5497,
+        type: 2}
+      propertyPath: m_Colors.m_HighlightedColor.g
+      value: 0.6307571
+      objectReference: {fileID: 0}
+    - target: {fileID: 114372298767177512, guid: 45e4e5afc3e96da47ad412bc387e5497,
+        type: 2}
+      propertyPath: m_Colors.m_HighlightedColor.b
+      value: 0.4573962
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 45e4e5afc3e96da47ad412bc387e5497, type: 2}
   m_IsPrefabParent: 0
@@ -2439,6 +2764,29 @@ RectTransform:
   m_PrefabParentObject: {fileID: 224042041795249646, guid: 45e4e5afc3e96da47ad412bc387e5497,
     type: 2}
   m_PrefabInternal: {fileID: 781727962}
+--- !u!1 &781727964 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1978476603007510, guid: 45e4e5afc3e96da47ad412bc387e5497,
+    type: 2}
+  m_PrefabInternal: {fileID: 781727962}
+--- !u!114 &781727965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 781727964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: caa94a7a3e79cbe4ba4d6d834dc53aeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UpdateCursors: 1
+  HoverSound:
+    Clip: {fileID: 8300000, guid: 36f9da9b02ed55a4296d81ed72eb5986, type: 3}
+    VolumeModifier: 0.5
+  ClickSound:
+    Clip: {fileID: 8300000, guid: c6bef2c776e268f44806e24f25fa9bd7, type: 3}
+    VolumeModifier: 0.6
 --- !u!1 &847480354
 GameObject:
   m_ObjectHideFlags: 0
@@ -2828,6 +3176,7 @@ GameObject:
   - component: {fileID: 997618285}
   - component: {fileID: 997618284}
   - component: {fileID: 997618283}
+  - component: {fileID: 997618287}
   m_Layer: 5
   m_Name: Authors
   m_TagString: Untagged
@@ -2969,6 +3318,24 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 997618281}
+--- !u!114 &997618287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 997618281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: caa94a7a3e79cbe4ba4d6d834dc53aeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UpdateCursors: 1
+  HoverSound:
+    Clip: {fileID: 8300000, guid: 36f9da9b02ed55a4296d81ed72eb5986, type: 3}
+    VolumeModifier: 0.5
+  ClickSound:
+    Clip: {fileID: 8300000, guid: c6bef2c776e268f44806e24f25fa9bd7, type: 3}
+    VolumeModifier: 0.6
 --- !u!1 &999116284
 GameObject:
   m_ObjectHideFlags: 0
@@ -3118,6 +3485,12 @@ MonoBehaviour:
   TravelTime: 0.5
   TargetPosition: {x: 0, y: 1000}
   MoveToTargetOnStart: 0
+  MoveToTargetSound:
+    Clip: {fileID: 8300000, guid: 0ed41c18fed51a144a5946d396ce8c6c, type: 3}
+    VolumeModifier: 1
+  MoveToSourceSound:
+    Clip: {fileID: 0}
+    VolumeModifier: 1
 --- !u!114 &1000157038
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3351,6 +3724,21 @@ Prefab:
       propertyPath: m_Text
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 114372298767177512, guid: 45e4e5afc3e96da47ad412bc387e5497,
+        type: 2}
+      propertyPath: m_Colors.m_HighlightedColor.r
+      value: 0.66176474
+      objectReference: {fileID: 0}
+    - target: {fileID: 114372298767177512, guid: 45e4e5afc3e96da47ad412bc387e5497,
+        type: 2}
+      propertyPath: m_Colors.m_HighlightedColor.g
+      value: 0.6307571
+      objectReference: {fileID: 0}
+    - target: {fileID: 114372298767177512, guid: 45e4e5afc3e96da47ad412bc387e5497,
+        type: 2}
+      propertyPath: m_Colors.m_HighlightedColor.b
+      value: 0.4573962
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 45e4e5afc3e96da47ad412bc387e5497, type: 2}
   m_IsPrefabParent: 0
@@ -3359,6 +3747,29 @@ RectTransform:
   m_PrefabParentObject: {fileID: 224042041795249646, guid: 45e4e5afc3e96da47ad412bc387e5497,
     type: 2}
   m_PrefabInternal: {fileID: 1088947325}
+--- !u!1 &1088947327 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1978476603007510, guid: 45e4e5afc3e96da47ad412bc387e5497,
+    type: 2}
+  m_PrefabInternal: {fileID: 1088947325}
+--- !u!114 &1088947328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1088947327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: caa94a7a3e79cbe4ba4d6d834dc53aeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UpdateCursors: 1
+  HoverSound:
+    Clip: {fileID: 8300000, guid: 36f9da9b02ed55a4296d81ed72eb5986, type: 3}
+    VolumeModifier: 0.5
+  ClickSound:
+    Clip: {fileID: 8300000, guid: c6bef2c776e268f44806e24f25fa9bd7, type: 3}
+    VolumeModifier: 0.6
 --- !u!1 &1099346491
 GameObject:
   m_ObjectHideFlags: 0
@@ -3815,6 +4226,21 @@ Prefab:
       propertyPath: m_Text
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 114372298767177512, guid: 45e4e5afc3e96da47ad412bc387e5497,
+        type: 2}
+      propertyPath: m_Colors.m_HighlightedColor.r
+      value: 0.66176474
+      objectReference: {fileID: 0}
+    - target: {fileID: 114372298767177512, guid: 45e4e5afc3e96da47ad412bc387e5497,
+        type: 2}
+      propertyPath: m_Colors.m_HighlightedColor.g
+      value: 0.6307571
+      objectReference: {fileID: 0}
+    - target: {fileID: 114372298767177512, guid: 45e4e5afc3e96da47ad412bc387e5497,
+        type: 2}
+      propertyPath: m_Colors.m_HighlightedColor.b
+      value: 0.4573962
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 45e4e5afc3e96da47ad412bc387e5497, type: 2}
   m_IsPrefabParent: 0
@@ -3823,6 +4249,29 @@ RectTransform:
   m_PrefabParentObject: {fileID: 224042041795249646, guid: 45e4e5afc3e96da47ad412bc387e5497,
     type: 2}
   m_PrefabInternal: {fileID: 1225297128}
+--- !u!1 &1225297130 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1978476603007510, guid: 45e4e5afc3e96da47ad412bc387e5497,
+    type: 2}
+  m_PrefabInternal: {fileID: 1225297128}
+--- !u!114 &1225297131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1225297130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: caa94a7a3e79cbe4ba4d6d834dc53aeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UpdateCursors: 1
+  HoverSound:
+    Clip: {fileID: 8300000, guid: 36f9da9b02ed55a4296d81ed72eb5986, type: 3}
+    VolumeModifier: 0.5
+  ClickSound:
+    Clip: {fileID: 8300000, guid: c6bef2c776e268f44806e24f25fa9bd7, type: 3}
+    VolumeModifier: 0.6
 --- !u!1 &1271210224
 GameObject:
   m_ObjectHideFlags: 0
@@ -5093,6 +5542,12 @@ MonoBehaviour:
   TravelTime: 0.5
   TargetPosition: {x: 0, y: 1000}
   MoveToTargetOnStart: 1
+  MoveToTargetSound:
+    Clip: {fileID: 8300000, guid: 0ed41c18fed51a144a5946d396ce8c6c, type: 3}
+    VolumeModifier: 1
+  MoveToSourceSound:
+    Clip: {fileID: 0}
+    VolumeModifier: 1
 --- !u!114 &1856621021
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5296,6 +5751,7 @@ GameObject:
   - component: {fileID: 2032285142}
   - component: {fileID: 2032285141}
   - component: {fileID: 2032285140}
+  - component: {fileID: 2032285144}
   m_Layer: 5
   m_Name: LevelSelect
   m_TagString: Untagged
@@ -5437,6 +5893,24 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2032285138}
+--- !u!114 &2032285144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2032285138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: caa94a7a3e79cbe4ba4d6d834dc53aeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UpdateCursors: 1
+  HoverSound:
+    Clip: {fileID: 8300000, guid: 36f9da9b02ed55a4296d81ed72eb5986, type: 3}
+    VolumeModifier: 0.5
+  ClickSound:
+    Clip: {fileID: 8300000, guid: c6bef2c776e268f44806e24f25fa9bd7, type: 3}
+    VolumeModifier: 0.6
 --- !u!1001 &2058898705
 Prefab:
   m_ObjectHideFlags: 0
@@ -5549,6 +6023,21 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114372298767177512, guid: 45e4e5afc3e96da47ad412bc387e5497,
+        type: 2}
+      propertyPath: m_Colors.m_HighlightedColor.r
+      value: 0.66176474
+      objectReference: {fileID: 0}
+    - target: {fileID: 114372298767177512, guid: 45e4e5afc3e96da47ad412bc387e5497,
+        type: 2}
+      propertyPath: m_Colors.m_HighlightedColor.g
+      value: 0.6307571
+      objectReference: {fileID: 0}
+    - target: {fileID: 114372298767177512, guid: 45e4e5afc3e96da47ad412bc387e5497,
+        type: 2}
+      propertyPath: m_Colors.m_HighlightedColor.b
+      value: 0.4573962
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 45e4e5afc3e96da47ad412bc387e5497, type: 2}
   m_IsPrefabParent: 0
@@ -5557,6 +6046,29 @@ RectTransform:
   m_PrefabParentObject: {fileID: 224042041795249646, guid: 45e4e5afc3e96da47ad412bc387e5497,
     type: 2}
   m_PrefabInternal: {fileID: 2058898705}
+--- !u!1 &2058898707 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1978476603007510, guid: 45e4e5afc3e96da47ad412bc387e5497,
+    type: 2}
+  m_PrefabInternal: {fileID: 2058898705}
+--- !u!114 &2058898708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2058898707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: caa94a7a3e79cbe4ba4d6d834dc53aeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UpdateCursors: 1
+  HoverSound:
+    Clip: {fileID: 8300000, guid: 36f9da9b02ed55a4296d81ed72eb5986, type: 3}
+    VolumeModifier: 0.5
+  ClickSound:
+    Clip: {fileID: 8300000, guid: c6bef2c776e268f44806e24f25fa9bd7, type: 3}
+    VolumeModifier: 0.6
 --- !u!1 &2067816179
 GameObject:
   m_ObjectHideFlags: 0
