@@ -20,6 +20,7 @@ namespace Assets.Scripts
         public AudioClipWithVolume NewSound;
         public AudioClipWithVolume PlaceSound;
         public AudioClipWithVolume SkipSound;
+        public AudioClipWithVolume CantPlaceSound;
 
         private VoxelFurniture _target;
         private Plane _plane = new Plane(Vector3.up, 0f);
@@ -68,15 +69,18 @@ namespace Assets.Scripts
             _remainingTime -= Time.deltaTime;
             if (_remainingTime < 0)
             {
-                _placeLock = true;
-                SoundManager.Instance.Play(SkipSound);
-                _target.MoveSmooth(new Vector3(0, 5, 0), () =>
+                if (!_placeLock)
                 {
-                    Destroy(_target.gameObject);
-                    GetNextTarget();
-                    _placeLock = false;
-                });
-                
+                    _placeLock = true;
+                    SoundManager.Instance.Play(SkipSound);
+                    _target.MoveSmooth(new Vector3(0, 5, 0), () =>
+                    {
+                        Destroy(_target.gameObject);
+                        GetNextTarget();
+                        _placeLock = false;
+                    });
+
+                }
                 return;
             }
 
@@ -171,6 +175,7 @@ namespace Assets.Scripts
                     }
                     else
                     {
+                        SoundManager.Instance.Play(CantPlaceSound);
                         Debug.Log("Can't place");
                     }
                 }

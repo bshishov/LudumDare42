@@ -2217,6 +2217,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Timer: 10
   RedVoxel: {fileID: 2100000, guid: caf8c8bcff845c84b9dcac1945d4089b, type: 2}
+  RotateSound:
+    Clip: {fileID: 0}
+    VolumeModifier: 1
+  NewSound:
+    Clip: {fileID: 0}
+    VolumeModifier: 1
+  PlaceSound:
+    Clip: {fileID: 0}
+    VolumeModifier: 1
+  SkipSound:
+    Clip: {fileID: 0}
+    VolumeModifier: 1
+  CantPlaceSound:
+    Clip: {fileID: 0}
+    VolumeModifier: 1
 --- !u!4 &1217015764
 Transform:
   m_ObjectHideFlags: 0

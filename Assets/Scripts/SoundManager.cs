@@ -68,6 +68,7 @@ namespace Assets.Scripts
 
 
         private readonly List<SoundHandler> _handlers = new List<SoundHandler>();
+        public SoundHandler MusicHandler;
         private static SoundManager _instance;
 
         public static SoundManager Instance
@@ -155,6 +156,33 @@ namespace Assets.Scripts
             if (clip == null)
                 return null;
             return Play(clip.Clip, clip.VolumeModifier, loop, pitch, ignoreListenerPause, delay);
+        }
+
+        public SoundHandler PlayMusic(AudioClipWithVolume clip, bool loop = true, float pitch = 1f,
+            bool ignoreListenerPause = false, float delay = 0f)
+        {
+            if (clip == null)
+                return null;
+
+            if (clip.Clip == null)
+                return null;
+
+            
+            if (MusicHandler != null)
+            {
+                //MusicHandler.Stop();
+                MusicHandler.Source.clip = clip.Clip;
+                MusicHandler.Volume = clip.VolumeModifier;
+                MusicHandler.IsLooped = loop;
+                MusicHandler.Pitch = pitch;
+                MusicHandler.Source.Play();
+                return MusicHandler;
+            }
+
+            var handler = Play(clip, loop, pitch, true, delay);
+            DontDestroyOnLoad(handler.Source.gameObject);
+            MusicHandler = handler;
+            return handler;
         }
     }
 }

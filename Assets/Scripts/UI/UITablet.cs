@@ -32,6 +32,7 @@ namespace Assets.Scripts.UI
         public AudioClipWithVolume Star2Sound;
         public AudioClipWithVolume Star3Sound;
         public AudioClipWithVolume LevelLoaded;
+        public AudioClipWithVolume Music;
 
         private UIMover _mover;
         private readonly List<UIFurnitureItem> _furnitureItems = new List<UIFurnitureItem>();
