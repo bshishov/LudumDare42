@@ -15,6 +15,12 @@ namespace Assets.Scripts
         [Header("Visuals")]
         public Material RedVoxel;
 
+        [Header("Sounds")]
+        public AudioClipWithVolume RotateSound;
+        public AudioClipWithVolume NewSound;
+        public AudioClipWithVolume PlaceSound;
+        public AudioClipWithVolume SkipSound;
+
         private VoxelFurniture _target;
         private Plane _plane = new Plane(Vector3.up, 0f);
         private int _yPos = 0;
@@ -44,6 +50,8 @@ namespace Assets.Scripts
                     _target.SetAppearance(true);
 
                     _remainingTime = Timer;
+
+                    SoundManager.Instance.Play(NewSound);
                 }
             }
             else
@@ -61,6 +69,7 @@ namespace Assets.Scripts
             if (_remainingTime < 0)
             {
                 _placeLock = true;
+                SoundManager.Instance.Play(SkipSound);
                 _target.MoveSmooth(new Vector3(0, 5, 0), () =>
                 {
                     Destroy(_target.gameObject);
@@ -73,10 +82,16 @@ namespace Assets.Scripts
 
             // Rotation
             if (Input.GetButtonDown("RotateY"))
+            {
+                SoundManager.Instance.Play(RotateSound);
                 _target.RotateYCw();
+            }
 
             if (Input.GetButtonDown("RotateX"))
+            {
+                SoundManager.Instance.Play(RotateSound);
                 _target.RotateXCw();
+            }
 
             // Placement target
             var targetVoxel = Vector3Int.zero;
@@ -151,6 +166,7 @@ namespace Assets.Scripts
                             _target = null;
                             GetNextTarget();
                             _placeLock = false;
+                            SoundManager.Instance.Play(PlaceSound);
                         });
                     }
                     else

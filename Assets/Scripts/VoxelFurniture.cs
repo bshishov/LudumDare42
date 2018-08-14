@@ -204,7 +204,7 @@ namespace Assets.Scripts
             {
                 foreach (var mat in meshRenderer.materials)
                 {
-                    mat.SetFloat("_Active", 1);
+                    mat.SetFloat("_Active", value? 1f : 0f);
                 }
             }
         }
