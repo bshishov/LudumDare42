@@ -7,7 +7,7 @@ namespace Assets.Scripts
 {
     public class Placer : Singleton<Placer>
     {
-        private VoxelFurniture _target;
+        public float RemainingTime { get { return _remainingTime; } }
 
         [Header("Gameplay")]
         public float Timer = 10f;
@@ -15,6 +15,7 @@ namespace Assets.Scripts
         [Header("Visuals")]
         public Material RedVoxel;
 
+        private VoxelFurniture _target;
         private Plane _plane = new Plane(Vector3.up, 0f);
         private int _yPos = 0;
         private Mesh _voxelMesh;
@@ -34,9 +35,13 @@ namespace Assets.Scripts
                 var furniture = Room.Instance.FurnitureStack.Pop();
                 if (furniture.Prefab != null)
                 {
+                    if(_target != null)
+                        _target.SetAppearance(false);
+
                     var go = GameObject.Instantiate(furniture.Prefab, new Vector3(0, 2, 0), Quaternion.identity);
                     _target = go.GetComponent<VoxelFurniture>();
                     _target.Furniture = furniture;
+                    _target.SetAppearance(true);
 
                     _remainingTime = Timer;
                 }

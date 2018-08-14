@@ -10,6 +10,29 @@ namespace Assets.Scripts.UI
         public Image Icon;
         public Image CheckMark;
 
+        public Color RequiredTint = Color.cyan;
+
+        public bool Required
+        {
+            get
+            {
+                return _required;
+            }
+            set
+            {
+                if (Icon != null)
+                {
+                    if (value)
+                    {
+                        Icon.color = RequiredTint;
+                    }
+                }
+                _required = value;
+            }
+        }
+
+        private bool _required;
+
         private void Start()
         {
             SetCheckmark(false);

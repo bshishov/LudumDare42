@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using Assets.Scripts.Data;
 using UnityEngine;
 
@@ -38,6 +40,7 @@ namespace Assets.Scripts
         private Vector3 _target;
         private Vector3 _velocity;
         private Action _moveCallback;
+        private Renderer[] _renderers;
 
         private void Start()
         {
@@ -190,6 +193,20 @@ namespace Assets.Scripts
             Representation.transform.localPosition = _targetLocalPosition;
             Representation.transform.localRotation = _targetLocalRotation;
             transform.position = _target;
+        }
+
+        public void SetAppearance(bool value)
+        {
+            if(_renderers == null)
+                _renderers = gameObject.GetComponentsInChildren<Renderer>();
+
+            foreach (var meshRenderer in _renderers)
+            {
+                foreach (var mat in meshRenderer.materials)
+                {
+                    mat.SetFloat("_Active", 1);
+                }
+            }
         }
     }
 }

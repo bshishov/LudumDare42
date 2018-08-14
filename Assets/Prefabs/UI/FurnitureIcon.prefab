@@ -114,8 +114,8 @@ MonoBehaviour:
       outSlope: 0
       tangentMode: 0
     - serializedVersion: 2
-      time: 0.5186773
-      value: 1.1587617
+      time: 0.48926753
+      value: 1.0382926
       inSlope: 0.7417798
       outSlope: 0.7417798
       tangentMode: 0
@@ -142,6 +142,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Icon: {fileID: 114769565138994104}
   CheckMark: {fileID: 114616518182791346}
+  RequiredTint: {r: 1, g: 0.9310343, b: 0, a: 1}
 --- !u!114 &114616518182791346
 MonoBehaviour:
   m_ObjectHideFlags: 1

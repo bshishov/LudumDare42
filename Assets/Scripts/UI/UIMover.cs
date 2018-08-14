@@ -7,6 +7,7 @@ namespace Assets.Scripts.UI
         public AnimationCurve Curve = AnimationCurve.EaseInOut(0, 0, 1, 1);
         public float TravelTime = 2f;
         public Vector2 TargetPosition;
+        public bool MoveToTargetOnStart = false;
 
         private Vector3 _origianlPosition;
         private Vector3 _sourcePosition;
@@ -22,6 +23,12 @@ namespace Assets.Scripts.UI
             _rectTransform = GetComponent<RectTransform>();
             _origianlPosition = _rectTransform.anchoredPosition;
             _sourcePosition = _origianlPosition;
+
+            if (MoveToTargetOnStart)
+            {
+                _sourcePosition = TargetPosition;
+                _rectTransform.anchoredPosition = TargetPosition;
+            }
         }
         
         void Update ()

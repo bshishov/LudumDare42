@@ -59,10 +59,10 @@ namespace Assets.Scripts
 
             // Generate tasks
             var allFurniture = new List<Furniture>();
-            foreach (var furnitureTask in FurniturePool)
+            foreach (var furniture in FurniturePool)
             {
-                for (var i = 0; i < furnitureTask.Amount; i++)
-                    allFurniture.Add(furnitureTask.Furniture);
+                for (var i = 0; i < furniture.Amount; i++)
+                    allFurniture.Add(furniture.Furniture);
             }
 
             allFurniture = allFurniture.OrderBy(x => Random.value).ToList();

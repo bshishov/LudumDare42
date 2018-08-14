@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Assets.Scripts.Data;
 using Assets.Scripts.Utils;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -24,7 +25,7 @@ namespace Assets.Scripts.UI
         public Image Star3;
 
         private UIMover _mover;
-        private List<UIFurnitureItem> _furnitureItems = new List<UIFurnitureItem>();
+        private readonly List<UIFurnitureItem> _furnitureItems = new List<UIFurnitureItem>();
 
         private void Start()
         {
@@ -48,6 +49,14 @@ namespace Assets.Scripts.UI
 
             if (FurnitureList != null && FurnitureItemPrefab != null)
             {
+                var required = new List<Furniture>();
+
+                foreach (var task in Room.Instance.FurnitureTasks)
+                {
+                    for (var i = 0; i < task.Amount; i++)
+                        required.Add(task.Furniture);
+                }
+
                 var pool = Room.Instance.FurniturePool;
                 foreach (var roomTask in pool)
                 {
@@ -58,6 +67,14 @@ namespace Assets.Scripts.UI
                         if (furnitureItem != null)
                         {
                             furnitureItem.Setup(roomTask.Furniture);
+
+                            var r = required.FirstOrDefault(f => f.Equals(furnitureItem.Furniture));
+                            if (r != null)
+                            {
+                                furnitureItem.Required = true;
+                                required.Remove(r);
+                            }
+
                             _furnitureItems.Add(furnitureItem);
                         }
                     }
@@ -121,7 +138,13 @@ namespace Assets.Scripts.UI
                 StarsFader.FadeIn();
 
             CaptionText.text = "Results";
-            FlavorText.text = Room.Instance.FinishText;
+            var star1 = Room.Instance.Star1();
+
+            if (star1)
+                FlavorText.text = Room.Instance.FinishText;
+            else
+                FlavorText.text = "All yellow items should be placed";
+
             StartCoroutine(StarAnimation());
         }
 
@@ -175,6 +198,11 @@ namespace Assets.Scripts.UI
             {
                 Star3.gameObject.SetActive(star3);
             }
+        }
+
+        public void LoadMainMenu()
+        {
+            SceneManager.LoadScene("menu");
         }
     }
 }
