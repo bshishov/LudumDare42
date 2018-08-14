@@ -8637,6 +8637,11 @@ Prefab:
       propertyPath: NextScene
       value: level3
       objectReference: {fileID: 0}
+    - target: {fileID: 114479227333483812, guid: 8981b365fa20ee4488aabcf3681e3fdf,
+        type: 2}
+      propertyPath: Timer
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8981b365fa20ee4488aabcf3681e3fdf, type: 2}
   m_IsPrefabParent: 0

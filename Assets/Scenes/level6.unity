@@ -7645,6 +7645,11 @@ Prefab:
       propertyPath: FurniturePool.Array.data[7].Amount
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114319676546877230, guid: 8981b365fa20ee4488aabcf3681e3fdf,
+        type: 2}
+      propertyPath: FinishText
+      value: Ha-ha, f**k you architect! We nailed it even without walls!
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8981b365fa20ee4488aabcf3681e3fdf, type: 2}
   m_IsPrefabParent: 0
