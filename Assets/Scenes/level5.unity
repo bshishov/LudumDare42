@@ -973,6 +973,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Timer: 10
   RedVoxel: {fileID: 2100000, guid: caf8c8bcff845c84b9dcac1945d4089b, type: 2}
+  RotateSound:
+    Clip: {fileID: 0}
+    VolumeModifier: 1
+  NewSound:
+    Clip: {fileID: 0}
+    VolumeModifier: 1
+  PlaceSound:
+    Clip: {fileID: 0}
+    VolumeModifier: 1
+  SkipSound:
+    Clip: {fileID: 0}
+    VolumeModifier: 1
 --- !u!4 &1217015764
 Transform:
   m_ObjectHideFlags: 0
@@ -2404,7 +2416,7 @@ Prefab:
     - target: {fileID: 114319676546877230, guid: 8981b365fa20ee4488aabcf3681e3fdf,
         type: 2}
       propertyPath: FurniturePool.Array.size
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 114319676546877230, guid: 8981b365fa20ee4488aabcf3681e3fdf,
         type: 2}
@@ -8487,7 +8499,7 @@ Prefab:
     - target: {fileID: 114319676546877230, guid: 8981b365fa20ee4488aabcf3681e3fdf,
         type: 2}
       propertyPath: FurniturePool.Array.data[4].Amount
-      value: 6
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 114319676546877230, guid: 8981b365fa20ee4488aabcf3681e3fdf,
         type: 2}
@@ -8524,6 +8536,17 @@ Prefab:
       value: 
       objectReference: {fileID: 11400000, guid: dea08d6cb1b924b438df2b942c55d2fd,
         type: 2}
+    - target: {fileID: 114319676546877230, guid: 8981b365fa20ee4488aabcf3681e3fdf,
+        type: 2}
+      propertyPath: FurniturePool.Array.data[6].Furniture
+      value: 
+      objectReference: {fileID: 11400000, guid: 30d64c76864250040882ce44daa0ad0c,
+        type: 2}
+    - target: {fileID: 114319676546877230, guid: 8981b365fa20ee4488aabcf3681e3fdf,
+        type: 2}
+      propertyPath: FurniturePool.Array.data[6].Amount
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8981b365fa20ee4488aabcf3681e3fdf, type: 2}
   m_IsPrefabParent: 0
