@@ -224,6 +224,7 @@ namespace Assets.Scripts.UI
 
         public void LoadMainMenu()
         {
+            Time.timeScale = 1f;
             SceneManager.LoadScene("menu");
         }
     }

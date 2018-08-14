@@ -5009,7 +5009,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Music:
     Clip: {fileID: 8300000, guid: 77d60b47865682d4b82d6d6954e5e0b9, type: 3}
-    VolumeModifier: 0.5
+    VolumeModifier: 0.3
 --- !u!1 &1479003886
 GameObject:
   m_ObjectHideFlags: 0

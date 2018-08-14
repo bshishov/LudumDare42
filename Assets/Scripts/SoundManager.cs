@@ -170,9 +170,10 @@ namespace Assets.Scripts
             
             if (MusicHandler != null)
             {
-                //MusicHandler.Stop();
+                Debug.Log(clip.VolumeModifier);
                 MusicHandler.Source.clip = clip.Clip;
-                MusicHandler.Volume = clip.VolumeModifier;
+                //MusicHandler.Volume = clip.VolumeModifier;
+                MusicHandler.Source.volume = clip.VolumeModifier;
                 MusicHandler.IsLooped = loop;
                 MusicHandler.Pitch = pitch;
                 MusicHandler.Source.Play();

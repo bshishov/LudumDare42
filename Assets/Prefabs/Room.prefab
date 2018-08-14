@@ -1056,4 +1056,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Music:
     Clip: {fileID: 8300000, guid: c83b404c561cb164f90cf7dd25b80c81, type: 3}
-    VolumeModifier: 0.5
+    VolumeModifier: 0.3
