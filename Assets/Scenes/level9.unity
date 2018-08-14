@@ -89,7 +89,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaIndirect: 2
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ShowResolutionOverlay: 1
-  m_LightingDataAsset: {fileID: 112000056, guid: bc8c7f738ea3bc74880c42b063bf494b,
+  m_LightingDataAsset: {fileID: 112000056, guid: dab8da768aca8d04f9d79e94705c5b50,
     type: 2}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -1477,6 +1477,9 @@ MonoBehaviour:
     Clip: {fileID: 0}
     VolumeModifier: 1
   SkipSound:
+    Clip: {fileID: 0}
+    VolumeModifier: 1
+  CantPlaceSound:
     Clip: {fileID: 0}
     VolumeModifier: 1
 --- !u!4 &1217015764
