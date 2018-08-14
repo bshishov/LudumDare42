@@ -1341,6 +1341,16 @@ Prefab:
       propertyPath: Positions.Array.data[2].x
       value: -4
       objectReference: {fileID: 0}
+    - target: {fileID: 114037534729372184, guid: d0099f53fd785184699f0d943cc0e083,
+        type: 2}
+      propertyPath: LookAt.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114037534729372184, guid: d0099f53fd785184699f0d943cc0e083,
+        type: 2}
+      propertyPath: LookAt.z
+      value: 0.25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d0099f53fd785184699f0d943cc0e083, type: 2}
   m_IsPrefabParent: 0
