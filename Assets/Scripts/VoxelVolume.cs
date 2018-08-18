@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Xml.Linq;
 using Assets.Scripts.Utils;
 using UnityEngine;
 
@@ -49,6 +50,9 @@ namespace Assets.Scripts
         public void RotateYCw(bool updateBounds = false)
         {
             // (x, y, z) -> (z, y, -x)
+            Rotate(new Vector3Int(0, 0, 1), Vector3Int.up, Vector3Int.left);
+
+            /*
             var newData = new VoxelDataDict();
             foreach (var kvp in Data)
             {
@@ -61,22 +65,46 @@ namespace Assets.Scripts
 
             if (updateBounds)
                 RecalculateBounds();
+                */
+        }
+
+        public void RotateYCCw(bool updateBounds = false)
+        {
+            // (x, y, z) -> (-z, y, x)
+            Rotate(new Vector3Int(0, 0, -1), Vector3Int.up, Vector3Int.right);
         }
 
         public void RotateXCw(bool updateBounds=false)
         {
             // (x, y, z) -> (x, -z, y)
+            Rotate(Vector3Int.right, new Vector3Int(0, 0, -1), Vector3Int.up);
+        }
+
+        public void RotateXCCw(bool updateBounds = false)
+        {
+            // (x, y, z) -> (x, -z, y)
+            Rotate(Vector3Int.right, new Vector3Int(0, 0, 1), Vector3Int.down);
+        }
+
+        private static int Multiply(Vector3Int p, Vector3Int w)
+        {
+            return p.x * w.x + p.y * w.y + p.z * w.z;
+        }
+
+        public void Rotate(Vector3Int xw, Vector3Int yw, Vector3Int zw, bool updateBounds = false)
+        {
             var newData = new VoxelDataDict();
             foreach (var kvp in Data)
             {
                 var p = kvp.Key;
-                var newP = new Vector3Int(p.x, -p.z, p.y);
+
+                var newP = new Vector3Int(Multiply(p, xw), Multiply(p, yw), Multiply(p, zw));
                 newData.Add(newP, kvp.Value);
             }
             Data = newData;
-            Pivot = new Vector3Int(Pivot.x, -Pivot.z, Pivot.y);
+            Pivot = new Vector3Int(Multiply(Pivot, xw), Multiply(Pivot, yw), Multiply(Pivot, zw));
 
-            if(updateBounds)
+            if (updateBounds)
                 RecalculateBounds();
         }
 

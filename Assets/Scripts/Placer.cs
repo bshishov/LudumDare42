@@ -11,6 +11,7 @@ namespace Assets.Scripts
 
         [Header("Gameplay")]
         public float Timer = 10f;
+        public float RotationMouseTravel = 20f;
 
         [Header("Visuals")]
         public Material RedVoxel;
@@ -28,6 +29,9 @@ namespace Assets.Scripts
         private Mesh _voxelMesh;
         private bool _placeLock;
         private float _remainingTime;
+        private bool _isRotating;
+        private float _rotationTravelX;
+        private float _rotationTravelY;
 
         private void Start()
         {
@@ -66,6 +70,7 @@ namespace Assets.Scripts
             if (_target == null || Room.Instance == null)
                 return;
 
+            // Timer check
             _remainingTime -= Time.deltaTime;
             if (_remainingTime < 0)
             {
@@ -84,6 +89,7 @@ namespace Assets.Scripts
                 return;
             }
 
+            /*
             // Rotation
             if (Input.GetButtonDown("RotateY"))
             {
@@ -95,6 +101,65 @@ namespace Assets.Scripts
             {
                 SoundManager.Instance.Play(RotateSound);
                 _target.RotateXCw();
+            }*/
+
+            _isRotating = Input.GetButton("RotateY");
+            if (_isRotating)
+            {
+                //Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
+                var xDelta = Input.GetAxis("Mouse X");
+                var yDelta = Input.GetAxis("Mouse Y");
+
+                if (xDelta > 0 && _rotationTravelX < 0)
+                    _rotationTravelX = 0f;
+
+                if (xDelta < 0 && _rotationTravelX > 0)
+                    _rotationTravelX = 0f;
+
+                if (yDelta > 0 && _rotationTravelY < 0)
+                    _rotationTravelY = 0f;
+                
+                if (yDelta < 0 && _rotationTravelY > 0)
+                    _rotationTravelY = 0f;
+                
+                _rotationTravelX += xDelta;
+                _rotationTravelY += yDelta;
+
+                if (_rotationTravelX > RotationMouseTravel)
+                {
+                    _rotationTravelX = 0;
+                    SoundManager.Instance.Play(RotateSound);
+                    _target.RotateYCCw();
+                }
+                
+                if (_rotationTravelX < -RotationMouseTravel)
+                {
+                    _rotationTravelX = 0;
+                    SoundManager.Instance.Play(RotateSound);
+                    _target.RotateYCw();
+                }
+
+                if (_rotationTravelY > RotationMouseTravel)
+                {
+                    _rotationTravelY = 0;
+                    SoundManager.Instance.Play(RotateSound);
+                    _target.RotateXCw();
+                }
+
+                if (_rotationTravelY < -RotationMouseTravel)
+                {
+                    _rotationTravelY = 0;
+                    SoundManager.Instance.Play(RotateSound);
+                    _target.RotateXCCw();
+                }
+            }
+            else
+            {
+                _rotationTravelX = 0;
+                _rotationTravelY = 0;
+                //Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
             }
 
             // Placement target
@@ -108,7 +173,7 @@ namespace Assets.Scripts
                 _yPos += 1;
             else if (scroll > 0)
                 _yPos -= 1;
-
+            
             _yPos = Mathf.Min(_yPos, Room.Instance.FillVolume.MaxBounds.y);
             _yPos = Mathf.Max(_yPos, Room.Instance.FillVolume.MinBounds.y);
 
@@ -149,10 +214,9 @@ namespace Assets.Scripts
             }
 
             // If we are allowed to actaully move the object
-            if (!_placeLock)
+            if (!_placeLock && !_isRotating)
             {
                 _target.MoveSmooth(targetPosition);
-
 
                 if (Input.GetButtonDown("Place"))
                 {

@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using Assets.Scripts.Data;
 using UnityEngine;
 
@@ -94,36 +92,29 @@ namespace Assets.Scripts
         public void RotateYCw()
         {
             _voxelObject.RotateYCw();
-            if (Representation != null)
-            {
-                var pivotCenter = _voxelObject.GetPivotCenter();
+            RotateRepresentation(Vector3.up, 90);
+        }
 
-                // I was too lazy with this math
-                var tmpLoc = Representation.transform.localPosition;
-                var tmpRot = Representation.transform.localRotation;
-
-                Representation.transform.localPosition = _targetLocalPosition;
-                Representation.transform.localRotation = _targetLocalRotation;
-
-                Representation.transform.RotateAround(pivotCenter, Vector3.up, 90);
-
-                _targetLocalPosition = Representation.transform.localPosition;
-                _targetLocalRotation = Representation.transform.localRotation;
-
-                Representation.transform.localPosition = tmpLoc;
-                Representation.transform.localRotation = tmpRot;
-
-                _startLocalPosition = tmpLoc;
-                _startLocalRotation = tmpRot;
-               
-                _isAnimating = true;
-                _animTime = 0f;
-            }
+        public void RotateYCCw()
+        {
+            _voxelObject.RotateYCCw();
+            RotateRepresentation(Vector3.up, -90);
         }
 
         public void RotateXCw()
         {
             _voxelObject.RotateXCw();
+            RotateRepresentation(Vector3.right, 90);
+        }
+
+        public void RotateXCCw()
+        {
+            _voxelObject.RotateXCCw();
+            RotateRepresentation(Vector3.right, -90);
+        }
+
+        private void RotateRepresentation(Vector3 axis, float degrees)
+        {
             if (Representation != null)
             {
                 var pivotCenter = _voxelObject.GetPivotCenter();
@@ -135,7 +126,7 @@ namespace Assets.Scripts
                 Representation.transform.localPosition = _targetLocalPosition;
                 Representation.transform.localRotation = _targetLocalRotation;
 
-                Representation.transform.RotateAround(pivotCenter, Vector3.right, 90);
+                Representation.transform.RotateAround(pivotCenter, axis, degrees);
 
                 _targetLocalPosition = Representation.transform.localPosition;
                 _targetLocalRotation = Representation.transform.localRotation;

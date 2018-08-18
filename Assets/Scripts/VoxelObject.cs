@@ -16,10 +16,22 @@ namespace Assets.Scripts
             Volume.RotateYCw();
         }
 
+        [ContextMenu("Rotate Y CCW")]
+        public void RotateYCCw()
+        {
+            Volume.RotateYCCw();
+        }
+
         [ContextMenu("Rotate X CW")]
         public void RotateXCw()
         {
             Volume.RotateXCw();
+        }
+
+        [ContextMenu("Rotate X CW")]
+        public void RotateXCCw()
+        {
+            Volume.RotateXCCw();
         }
 
         public Vector3 GetPivotCenter()
@@ -48,7 +60,7 @@ namespace Assets.Scripts
             if (!DrawGizmos)
                 return;
 
-            const float Opacity = 0.5f;
+            const float opacity = 0.5f;
 
             // Voxels
             //Gizmos.color = new Color(1f, 1f, 1f, Opacity);
@@ -60,7 +72,7 @@ namespace Assets.Scripts
             }
 
             // Pivot
-            Gizmos.color = new Color(1f, 0f, 0f, Opacity);
+            Gizmos.color = new Color(1f, 0f, 0f, opacity);
             var pivotPos = VoxelSpace.GetWorldPositionCenter(VoxelSpace.GetWorldVoxelFromLocalVoxel(transform.position, Volume.Pivot - Volume.Pivot));
             Gizmos.DrawCube(pivotPos, VoxelSpace.VoxelSize3D * 0.9f);
         }
